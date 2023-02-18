@@ -1,0 +1,157 @@
+body{
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap')
+}
+   
+  
+ h1{
+    letter-spacing: 5px;
+ }
+ /************** ANIMATION DU TEXTE SUR LA PAGE D'INSCRIPTION *******************/
+ .techs {
+  padding-left: -5%;
+  display: flex;
+  transform: translate(-50, -50);
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+.techs>li {
+  list-style-type: none;
+  font-size: 2.5em;
+  letter-spacing: 3px;
+  animation: flash 2s linear infinite;
+}
+
+@keyframes flash {
+  0% {
+      color: #2C9843;
+      text-shadow: none;
+  }
+  25% {
+      color: #2C9843;
+      text-shadow: none;
+  }
+  50% {
+      color: #2C9843;
+      text-shadow: none;
+  }
+  75% {
+      color: #2C9843;
+      text-shadow: none;
+  }
+  100% {
+      color: #38b298;
+      text-shadow: 0px 0px 5px #38b298, 0px 0px 50px #38b298;
+  }
+}
+
+.techs>li:nth-child(1) {
+  animation-delay: .1s;
+}
+
+.techs>li:nth-child(2) {
+  animation-delay: .2s;
+}
+
+.techs>li:nth-child(3) {
+  animation-delay: .3s;
+}
+
+.techs>li:nth-child(4) {
+  animation-delay: .4s;
+}
+
+.techs>li:nth-child(5) {
+  animation-delay: .5s;
+}
+
+.conferences {
+  padding-left: -5%;
+  display: flex;
+  transform: translate(-50, -50);
+}
+
+.conferences>li {
+  list-style-type: none;
+  font-size: 2.5em;
+  letter-spacing: 3px;
+  animation: flash 2s linear infinite;
+  line-height: 1.5px;
+  letter-spacing: 10px;
+  font-weight: bold;
+
+}
+
+@keyframes flash {
+  0% {
+      color: #2C9843;
+      text-shadow: none;
+  }
+  25% {
+      color: #2C9843;
+      text-shadow: none;
+  }
+  50% {
+      color: #2C9843;
+      text-shadow: none;
+  }
+  75% {
+      color: #2C9843;
+      text-shadow: none;
+  }
+  100% {
+      color: rgb(225, 228, 29);
+      text-shadow: 0px 0px 0px rgb(15, 216, 223), 0px 0px 50px rgb(39, 218, 16);
+  }
+}
+
+.conferences>li:nth-child(1) {
+  animation-delay: .1s;
+}
+
+.conferences>li:nth-child(2) {
+  animation-delay: .2s;
+}
+
+.conferences>li:nth-child(3) {
+  animation-delay: .3s;
+}
+
+.conferences>li:nth-child(4) {
+  animation-delay: .4s;
+}
+
+.conferences>li:nth-child(5) {
+  animation-delay: .5s;
+}
+
+.conferences>li:nth-child(6) {
+  animation-delay: .6s;
+}
+
+.conferences>li:nth-child(7) {
+  animation-delay: .5s;
+}
+
+.conferences>li:nth-child(8) {
+  animation-delay: .7s;
+}
+
+.conferences>li:nth-child(9) {
+  animation-delay: .8s;
+}
+
+.conferences>li:nth-child(10) {
+  animation-delay: .9s;
+}
+
+.conferences>li:nth-child(11) {
+  animation-delay: 1s;
+}
+.scroller {
+  width: 300px;
+  height: 100px;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+}
