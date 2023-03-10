@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class EvaluationCommercial extends Controller
+class EvaluationCommercialController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -12,8 +13,8 @@ class EvaluationCommercial extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    { 
+        return view('evaluation_commercial.index');
     }
 
     /**

@@ -22,6 +22,18 @@
 </head>
 
 <body style="background-color: #dee9e0" onload="getLocation();">
+    <style>
+        .kbw-signature {
+            width: 100%;
+            height: 200px;
+        }
+
+        #sig1 canvas {
+            width: 100% !important;
+            height: auto;
+        }
+       
+    </style>
     <div id="app">
         <main class="py-0">
             @yield('content')
@@ -71,6 +83,43 @@
                     break;
             }
         }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://keith-wood.name/js/jquery.signature.js"></script>
+    
+    <script type="text/javascript">
+        var sig1 = $('#sig1').signature({
+            syncField: '#signature1',
+            syncFormat: 'PNG'
+        });
+        $('#clear1').click(function(e) {
+            e.preventDefault();
+            sig1.signature('clear');
+            $("#signature1").val('');
+        });
+
+         var sig2 = $('#sig2').signature({
+            syncField: '#signature2',
+            syncFormat: 'PNG'
+        });
+        $('#clear2').click(function(e) {
+            e.preventDefault();
+            sig2.signature('clear');
+            $("#signature2").val('');
+        });
+
+        var sig3 = $('#sig3').signature({
+            syncField: '#signature3',
+            syncFormat: 'PNG'
+        });
+        $('#clear3').click(function(e) {
+            e.preventDefault();
+            sig3.signature('clear');
+            $("#signature3").val('');
+        }); 
     </script>
 </body>
 

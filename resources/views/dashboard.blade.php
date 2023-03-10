@@ -150,7 +150,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link fs-5">
+                                    <a href="{{ route('evaluations_commercials.index') }}" class="nav-link fs-5">
                                         <i class="fa-solid fa-pen text-light"></i>&nbsp;
                                         <p>Evaluation commercial</p>
                                     </a>

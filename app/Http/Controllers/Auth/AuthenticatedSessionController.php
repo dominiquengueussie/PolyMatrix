@@ -45,7 +45,7 @@ class AuthenticatedSessionController extends Controller
             ->select('roles.nom')
             ->first();
         $nom_role = $role->nom;
-        if (Str::contains($nom_role, 'Commercial')) {   
+        if (Str::contains($nom_role, 'Analyste')) {   
             return  redirect()->route('statistique');
         }
         return view('dashboard');
