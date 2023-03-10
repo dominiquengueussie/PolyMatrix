@@ -53,9 +53,9 @@
                                 <td>{{ $user->role->nom }}</td>
                                 <td>{{ $user->telephone }}</td>
                                 <td>{{ $user->agence->nom }}</td>
-                                <td>
+                                <td class="d-flex align-items-center justify-content-center">
                                     <form action="{{ route('users.destroy', $user->id) }}" method="POST">
-                                        <a title="Modifier rôle" class=""
+                                        <a title="Modifier" class=""
                                             href="{{ route('users.edit', $user->id) }}"><i
                                                 class="fa-solid fa-pen-to-square text-dark fs-6 mx-3"></i></a>
 

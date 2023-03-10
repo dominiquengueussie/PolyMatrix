@@ -6,8 +6,23 @@
         <div class="container-fluid h-custom">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-md-9 col-lg-6 col-xl-5 mb-5">
-                    <img src="{{ asset('images/commercial.jpg') }}"
-                        class="img-fluid rounded-3" alt="Sample image">
+                      <ul class="techs fs-6 me-5">
+                            <li>P</li>
+                            <li>O</li>
+                            <li>L</li>
+                            <li>Y</li>
+                            <li>M</li>
+                            <li>A</li>
+                            <li>T</li>
+                            <li>R</li>
+                            <li>I</li>
+                            <li>X</li>
+                            <li>.</li>
+                            <li>.</li>
+                            <li>.</li>
+                        </ul>
+                        <ul class="conferences">
+                        </ul>
                 </div>
                 <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                     <form method="POST" action="{{ route('login') }}">
@@ -53,7 +68,6 @@
                             {{-- <p class="small fw-bold mt-3 pt-1 mb-3 float-right">Don't have an account? <a href="#!"
                                     class="link-danger">Register</a></p> --}}
                         </div>
-
                     </form>
                 </div>
             </div>

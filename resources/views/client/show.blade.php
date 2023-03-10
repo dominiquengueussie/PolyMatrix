@@ -107,12 +107,12 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link fs-5">
-                                        <i class="fa-sharp fa-solid fa-file-pdf text-light"></i>&nbsp;
-                                        <p>Fiches produits</p>
+                                    <a href="{{ route('clients.index') }}" class="nav-link fs-5">
+                                        <i class="fa-solid fa-user-doctor text-light"></i></i>&nbsp;
+                                        <p>Clients</p>
                                     </a>
                                 </li>
-                               {{--  <li class="nav-item">
+                                <li class="nav-item">
                                     <a href="{{ route('type_client.index') }}" class="nav-link fs-5">
                                         <i class="fa-solid fa-tag text-light"></i>&nbsp;
                                         <p>Type de client</p>
@@ -123,7 +123,7 @@
                                         <i class="fa-solid fa-gears text-light"></i>&nbsp;
                                         <p>Catégorie client</p>
                                     </a>
-                                </li> --}}
+                                </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link fs-5">
                                         <i class="fa-sharp fa-solid fa-chart-column text-light"></i>&nbsp;
@@ -181,62 +181,146 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Liste des rôles disponible</h1>
+                            <h1 class="m-0">Profil du client</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dasboard</a></li>
-                                <li class="breadcrumb-item active"> <a href="{{ route('roles.index') }}">Rôles</a></li>
+                                <li class="breadcrumb-item active"> <a href="{{ route('clients.index') }}">
+                                        Clients</a></li>
                             </ol>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="">
-                                <div class="col-8 mx-auto mt-5">
-                                    @livewire('role-list')
-                                    <!-- Button trigger modal -->
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal" tabindex="-1"
-                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header bg-success">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Créer un rôle</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
+            <div class="container py-5">
+                <div class="row justify-content-center">
+
+                    <div class="col-md-12">
+                        <div>
+                            <div class="card border border-none shadow-lg">
+                                <div class="card-header bg-success text-white fs-5"><i
+                                        class="fa-solid fa-user-doctor"></i>
+                                    {{ __('Profile du client') }}</div>
+                                <div style="background-color: #ebf3fb;" class="card-body text-center">
+
+                                    <div class="row d-flex">
+                                        <section style="background-color: #eee;">
+                                            <div class="container py-5">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+                                                            <ol class="breadcrumb mb-0">
+                                                                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">dashboard</a>
+                                                                </li>
+                                                                <li class="breadcrumb-item"><a href="{{ route('clients.index') }}">clients</a>
+                                                                </li>
+                                                                <li class="breadcrumb-item active" aria-current="page">
+                                                                    Profil client</li>
+                                                            </ol>
+                                                        </nav>
+                                                    </div>
                                                 </div>
-                                                <div class="modal-body">
-                                                    <form class="row g-3" action="{{ route('roles.store') }}"
-                                                        method="post">
-                                                        @csrf
-                                                        <div class="col-auto">
-                                                            <label for="role" class="visually-hidden">Rôle</label>
-                                                            <input type="text"
-                                                                class="form-control @error('nom') is-invalid @enderror"
-                                                                size="50" value="{{ old('role') }}"
-                                                                name="role" id="role" placeholder="rôle">
-                                                            @if ($errors->has('role'))
-                                                                <span style="font-size: 15px;"
-                                                                    class="text-danger">{{ $errors->first('role') }}</span>
-                                                            @endif
+
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <div class="card mb-4 bg-success">
+                                                            <div class="card-body text-center">
+                                                                <img src="{{ asset('images/avatar.png') }}"
+                                                                    alt="avatar" class="rounded-circle img-fluid"
+                                                                    style="width: 200px;">
+                                                                <h5 class="my-5 mb-1 fw-bolder text-light fs-3">{{ $client->designation }}</h5>
+                                                                <p class="text-light mb-0 fs-5"><i class="fa-solid fa-location-dot text-secondary fs-5"></i> {{ $client->ville }}, {{ $client->pays }}</p>
+                                                                <p class="text-muted mb-4"></p>
+                                                            </div>
                                                         </div>
+                                                      
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <div class="card mb-4">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-sm-3">
+                                                                        <p class="mb-0">Agence:</p>
+                                                                    </div>
+                                                                    <div class="col-sm-9">
+                                                                        <p class="text-muted mb-0">{{ $client->agence->nom }}</p>
+                                                                    </div>
+                                                                </div>
+                                                                <hr>
+                                                                <div class="row">
+                                                                    <div class="col-sm-3">
+                                                                        <p class="mb-0">Zone commerciale:</p>
+                                                                    </div>
+                                                                    <div class="col-sm-9">
+                                                                        <p class="text-muted mb-0">{{ $client->zone_commerciale->nom }}</p>
+                                                                    </div>
+                                                                </div>
+                                                                <hr>
+                                                                <div class="row">
+                                                                    <div class="col-sm-3">
+                                                                        <p class="mb-0">Quartier:</p>
+                                                                    </div>
+                                                                    <div class="col-sm-9">
+                                                                        <p class="text-muted mb-0">{{ $client->quartier }}</p>
+                                                                    </div>
+                                                                </div>
+                                                                <hr>
+                                                                <div class="row">
+                                                                    <div class="col-sm-3">
+                                                                        <p class="mb-0">Typologie:</p>
+                                                                    </div>
+                                                                    <div class="col-sm-9">
+                                                                        <p class="text-muted mb-0">{{ $client->typologie }}</p>
+                                                                    </div>
+                                                                </div>
+                                                                <hr>
+                                                                <div class="row">
+                                                                    <div class="col-sm-3">
+                                                                        <p class="mb-0">Réseau:</p>
+                                                                    </div>
+                                                                    <div class="col-sm-9">
+                                                                        <p class="text-muted mb-0">{{ $client->reseau }}</p>
+                                                                    </div>
+                                                                </div>
+                                                                <hr>
+                                                                <div class="row">
+                                                                    <div class="col-sm-3">
+                                                                        <p class="mb-0">Statut:</p>
+                                                                    </div>
+                                                                    <div class="col-sm-9">
+                                                                        <p class="text-muted mb-0">{{ $client->statut }}</p>
+                                                                    </div>
+                                                                </div>
+                                                                <hr>
+                                                                <div class="row">
+                                                                    <div class="col-sm-3">
+                                                                        <p class="mb-0">Catégorie:</p>
+                                                                    </div>
+                                                                    <div class="col-sm-9">
+                                                                        <p class="text-muted mb-0">{{ $client->categorie->nom }}</p>
+                                                                    </div>
+                                                                </div>
+                                                                <hr>
+                                                                <div class="row">
+                                                                    <div class="col-sm-3">
+                                                                        <p class="mb-0">Type:</p>
+                                                                    </div>
+                                                                    <div class="col-sm-9">
+                                                                        <p class="text-muted mb-0">{{ $client->type_client->nom }}</p>
+                                                                    </div>
+                                                                </div>
+                                                                <hr>
+                                                            </div>
+                                                        </div>
+                                                       
+                                                    </div>
                                                 </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-bs-dismiss="modal">Fermer</button>
-                                                    <button type="sssubmit" class="btn btn-success">Sauvegarder</button>
-                                                </div>
-                                                </form>
                                             </div>
-                                        </div>
+                                        </section>
                                     </div>
-                                    <!--END Modal -->
+
                                 </div>
                             </div>
                         </div>

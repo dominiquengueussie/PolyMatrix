@@ -83,44 +83,55 @@
                                                                             </tr>
                                                                         </thead>
                                                                         <tbody class="text-center">
-                                                                            {{-- @foreach ($clients as $client) --}}
-                                                                             <tr>
-                                                                                     {{--   <td>{{ $client->id }}</td>
+                                                                            @foreach ($clients as $client)
+                                                                                <tr>
+                                                                                    <td>{{ $client->id }}</td>
                                                                                     <td>{{ $client->designation }}</td>
                                                                                     <td>{{ $client->pays }}</td>
                                                                                     <td>{{ $client->ville }}</td>
                                                                                     <td>{{ $client->agence->nom }}</td>
-                                                                                    <td>{{ $client->zone_commerciales->nom }}</td>
+                                                                                    <td>{{ $client->zone_commerciale->nom }}
+                                                                                    </td>
                                                                                     <td>{{ $client->quartier }}</td>
                                                                                     <td>{{ $client->typologie }}</td>
                                                                                     <td>{{ $client->reseau }}</td>
                                                                                     <td>{{ $client->statut }}</td>
-                                                                                    <td>{{ $client->type_client->nom }}</td>
-                                                                                    <td>{{ $client->categories->nom }}</td>
-                                                                                    <td>
+                                                                                    <td>{{ $client->type_client->nom }}
+                                                                                    </td>
+                                                                                    <td>{{ $client->categorie->nom }}
+                                                                                    </td>
+                                                                                    <td
+                                                                                        class=" d-flex align-items-center justify-content-center mx-3">
+                                                                                        <a title="Voir le profil du client"
+                                                                                            href="{{ route('clients.show', $client->id) }}"><i
+                                                                                                class="fa-regular fa-eye text-dark fs-6"></i></a>&nbsp;&nbsp;
+                                                                                        <a title="Voir sur le map"
+                                                                                            href="{{ url('infos/client/map/' . $client->id) }}"><i
+                                                                                                class="fa-solid fa-map-location-dot text-dark mx-1 fs-6"></i></a>
+
                                                                                         <form
-                                                                                            action="{{ route('agence.destroy', $agence->id) }}"
-                                                                                            method="POST">
-                                                                                            <a title="Modifier agence"
+                                                                                            action="{{ route('clients.destroy', $client->id) }}"
+                                                                                            method="POST" class="mx-2">
+                                                                                            <a title="Modifier le client"
                                                                                                 class=""
-                                                                                                href="{{ route('agence.edit', $agence->id) }}"><i
-                                                                                                    class="fa-solid fa-pen-to-square text-dark fs-6 mx-3"></i></a>
+                                                                                                href="{{ route('clients.edit', $client->id) }}"><i
+                                                                                                    class="fa-solid fa-pen-to-square text-dark fs-6 mx-1"></i></a>
 
                                                                                             @csrf
                                                                                             @method('DELETE')
 
                                                                                             <button
                                                                                                 onclick="return confirm('Etes-vous sûr de vouloir supprimer?')"
-                                                                                                title="Supprimer agence"
+                                                                                                title="Supprimer le client"
                                                                                                 type="submit"
                                                                                                 class="border-0">
                                                                                                 <i
                                                                                                     class="fa-solid fa-trash-can text-dark"></i>
                                                                                             </button>
                                                                                         </form>
-                                                                                    </td> --}}
+                                                                                    </td>
                                                                                 </tr>
-                                                                           {{--  @endforeach --}}
+                                                                            @endforeach
                                                                         </tbody>
                                                                     </table>
                                                                 </div>
@@ -147,6 +158,11 @@
                                                     <div class="col-lg-12 mb-5 mb-lg-0">
                                                         <div class="card">
                                                             <div class="card-body py-5 px-md-5 ">
+                                                                @error('longitude')
+                                                                    <div class="alert alert-danger text-center fs-4">
+                                                                        {{ $message }}
+                                                                    </div>
+                                                                @enderror
                                                                 <form class="myForm" method="post"
                                                                     action="{{ route('clients.store') }}">
                                                                     @csrf
@@ -158,7 +174,7 @@
                                                                                     <span
                                                                                         class="text-danger">*</span></label>
                                                                                 <input type="text" id="designation"
-                                                                                    class="form-control @error('designation') is-invalid @enderror"
+                                                                                    class="form-control border border-success @error('designation') is-invalid @enderror"
                                                                                     placeholder="désignation"
                                                                                     value="{{ old('designation') }}"
                                                                                     name="designation"
@@ -176,7 +192,7 @@
                                                                                     for="pays">Pays<span
                                                                                         class="text-danger">*</span></label>
                                                                                 <input type="text" id="pays"
-                                                                                    class="form-control @error('pays') is-invalid @enderror"
+                                                                                    class="form-control border border-success @error('pays') is-invalid @enderror"
                                                                                     name="pays" placeholder="pays"
                                                                                     value="{{ old('pays') }}" />
                                                                                 @if ($errors->has('pays'))
@@ -191,7 +207,7 @@
                                                                                     for="ville">Ville <span
                                                                                         class="text-danger">*</span></label>
                                                                                 <input type="text" id="ville"
-                                                                                    class="form-control @error('ville') is-invalid @enderror"
+                                                                                    class="form-control border border-success @error('ville') is-invalid @enderror"
                                                                                     name="ville" placeholder="ville"
                                                                                     value="{{ old('ville') }}" />
                                                                                 @if ($errors->has('ville'))
@@ -207,7 +223,7 @@
                                                                                     for="agence">Agence<span
                                                                                         class="text-danger">*</span></label>
                                                                                 <select name="agence" id="agence"
-                                                                                    class="rounded form-select border border-dark">
+                                                                                    class="rounded form-select border border-success">
                                                                                     @foreach ($agences as $agence)
                                                                                         <option
                                                                                             value="{{ $agence->id }}">
@@ -217,7 +233,9 @@
                                                                                 </select>
                                                                                 @if ($errors->has('agence'))
                                                                                     <span style="font-size: 15px;"
-                                                                                        class="text-danger">{{ $errors->first('agence') }}</span>
+                                                                                        class="text-danger">{{ $errors->first('agence') }}
+                                                                                        <a
+                                                                                            href="{{ route('agence.index') }}">Créer</a></span>
                                                                                 @endif
                                                                             </div>
                                                                         </div>
@@ -227,7 +245,7 @@
                                                                                     for="quartier">Quartier <span
                                                                                         class="text-danger">*</span></label>
                                                                                 <input type="text" id="quartier"
-                                                                                    class="form-control @error('quartier') is-invalid @enderror"
+                                                                                    class="form-control border border-success @error('quartier') is-invalid @enderror"
                                                                                     name="quartier"
                                                                                     placeholder="quartier"
                                                                                     value="{{ old('quartier') }}" />
@@ -245,7 +263,7 @@
                                                                                     commerciale<span
                                                                                         class="text-danger">*</span></label>
                                                                                 <select name="zone" id="zone"
-                                                                                    class="rounded form-select border border-dark">
+                                                                                    class="rounded form-select border border-success">
                                                                                     @foreach ($zones as $zone)
                                                                                         <option
                                                                                             value="{{ $zone->id }}">
@@ -255,7 +273,9 @@
                                                                                 </select>
                                                                                 @if ($errors->has('zone'))
                                                                                     <span style="font-size: 15px;"
-                                                                                        class="text-danger">{{ $errors->first('zone') }}</span>
+                                                                                        class="text-danger">{{ $errors->first('zone') }}
+                                                                                        <a
+                                                                                            href="{{ route('zone_commerciale.index') }}">Créer</a></span>
                                                                                 @endif
                                                                             </div>
                                                                         </div>
@@ -266,7 +286,7 @@
                                                                                     <span
                                                                                         class="text-danger">*</span></label>
                                                                                 <input type="text" id="typologie"
-                                                                                    class="form-control @error('typologie') is-invalid @enderror"
+                                                                                    class="form-control border border-success @error('typologie') is-invalid @enderror"
                                                                                     placeholder="typologie"
                                                                                     value="{{ old('typologie') }}"
                                                                                     name="typologie" />
@@ -283,7 +303,7 @@
                                                                                     for="pays">Réseau<span
                                                                                         class="text-danger">*</span></label>
                                                                                 <input type="text" id="pays"
-                                                                                    class="form-control @error('reseau') is-invalid @enderror"
+                                                                                    class="form-control border border-success @error('reseau') is-invalid @enderror"
                                                                                     name="reseau"
                                                                                     placeholder="réseau" />
                                                                                 @if ($errors->has('reseau'))
@@ -300,7 +320,7 @@
                                                                                         class="text-danger">*</span></label>
                                                                                 <select name="categorie"
                                                                                     id="categorie"
-                                                                                    class="rounded form-select border border-dark">
+                                                                                    class="rounded form-select border border-success">
                                                                                     @foreach ($categories as $categorie)
                                                                                         <option
                                                                                             value="{{ $categorie->id }}">
@@ -310,7 +330,9 @@
                                                                                 </select>
                                                                                 @if ($errors->has('categorie'))
                                                                                     <span style="font-size: 15px;"
-                                                                                        class="text-danger">{{ $errors->first('categorie') }}</span>
+                                                                                        class="text-danger">{{ $errors->first('categorie') }}
+                                                                                        <a
+                                                                                            href="{{ route('category_client.index') }}">Créer</a></span>
                                                                                 @endif
                                                                             </div>
                                                                         </div>
@@ -320,7 +342,7 @@
                                                                                     for="type">Type de client<span
                                                                                         class="text-danger">*</span></label>
                                                                                 <select name="type" id="type"
-                                                                                    class="rounded form-select border border-dark">
+                                                                                    class="rounded form-select border border-success">
                                                                                     @foreach ($types as $type)
                                                                                         <option
                                                                                             value="{{ $type->id }}">
@@ -330,7 +352,9 @@
                                                                                 </select>
                                                                                 @if ($errors->has('type'))
                                                                                     <span style="font-size: 15px;"
-                                                                                        class="text-danger">{{ $errors->first('type') }}</span>
+                                                                                        class="text-danger">{{ $errors->first('type') }}
+                                                                                        <a
+                                                                                            href="{{ route('type_client.index') }}">Créer</a></span>
                                                                                 @endif
                                                                             </div>
                                                                         </div>
@@ -340,7 +364,7 @@
                                                                                     for="statut">Statut<span
                                                                                         class="text-danger">*</span></label>
                                                                                 <select name="statut" id="statut"
-                                                                                    class="rounded form-select border border-dark">
+                                                                                    class="rounded form-select border border-success">
                                                                                     <option>
                                                                                         Actif
                                                                                     </option>
@@ -360,7 +384,7 @@
                                                                                 @endif
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-md-6 mb-4">
+                                                                        <div hidden class="col-md-6 mb-4">
                                                                             <div class="form-outline">
                                                                                 <input type="text" id="latitude"
                                                                                     class="form-control"
@@ -368,12 +392,16 @@
                                                                                     name="latitude" />
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-md-6 mb-4">
+                                                                        <div hidden class="col-md-6 mb-4">
                                                                             <div class="form-outline">
                                                                                 <input type="text" id="longitude"
                                                                                     class="form-control"
                                                                                     name="longitude"
                                                                                     placeholder="longitude" />
+                                                                                @if ($errors->has('longitude'))
+                                                                                    <span style="font-size: 35px;"
+                                                                                        class="text-danger text-center">{{ $errors->first('longitude') }}</span>
+                                                                                @endif
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -396,10 +424,10 @@
                                     </p>
                                 </div>
                                 {{--  <div id="menu2" class="container tab-pane fade"><br>
-                                <h3>Menu 2</h3>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                    doloremque laudantium, totam rem aperiam.</p>
-                            </div> --}}
+                            <h3>Menu 2</h3>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                doloremque laudantium, totam rem aperiam.</p>
+                        </div> --}}
                             </div>
                         </div>
                     </div>

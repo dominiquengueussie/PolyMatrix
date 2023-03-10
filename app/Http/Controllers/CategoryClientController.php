@@ -42,7 +42,7 @@ class CategoryClientController extends Controller
         ]);
         $category = new Categorie();
         $category->nom = $request->nom;
-        $category->user_id = Auth::user()->id;
+        //$category->user_id = Auth::user()->id;
         $save = $category->save();
 
         if ($save) {

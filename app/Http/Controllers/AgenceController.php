@@ -44,7 +44,7 @@ class AgenceController extends Controller
         ]);
         $agences = new Agence();
         $agences->nom = $request->nom;
-        $agences->user_id = Auth::user()->id;
+        //$agences->user_id = Auth::user()->id;
         $save = $agences->save();
 
         if ($save) {
@@ -73,7 +73,7 @@ class AgenceController extends Controller
      */
     public function edit($id)
     {
-        $agence = Agence::find($id);
+        $agence = Agence::findOrFail($id);
         return view('agence.edit', compact('agence'));
     }
 

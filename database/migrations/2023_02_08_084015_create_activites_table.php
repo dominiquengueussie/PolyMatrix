@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('nom commercial');
             $table->string('poste commercial');
-            $table->date('date');
             $table->string('heure_debut');
             $table->string('heure_fin');
             $table->string('check');
@@ -31,7 +30,7 @@ return new class extends Migration
             $table->string('email interlocuteur');
             $table->string('telephone interlocuteur');
             $table->string('signature commercial');
-            $table->string('besoin(SAV)');
+            $table->string('besoin(SAV)');// sollicitation d'envoi d'email avec un fichier rattaché.
             $table->string('longitude');
             $table->string('latitude');
             $table->string('conclusion');
@@ -42,7 +41,6 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('categorie_id')->constrained()->onDelete('cascade');
             $table->date('date');
-            $table->id();
             $table->timestamps();
         });
     }

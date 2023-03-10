@@ -15,19 +15,21 @@
     <script src="{{ asset('font-awesome/kit.fontawesome.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('css/adminlte.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="{{ asset('css/bootstrapwatch.min.css') }}">
     @livewireStyles()
     <title>PolyMatrix</title>
 </head>
 
-<body onload="getLocation();">
+<body style="background-color: #dee9e0" onload="getLocation();">
     <div id="app">
         <main class="py-0">
             @yield('content')
         </main>
     </div>
-    <script src="{{ asset('js/bootstrap.bundle.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
+    {{-- <script src="{{ asset('js/bootstrap.bundle.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script> --}}
     <script>
         @if (Session::has('success'))
             toastr.options = {

@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('agences', function (Blueprint $table) {
             $table->id();
             $table->string('nom');
-            $table->integer('created_by');
+           // $table->integer('created_by');
             $table->timestamps();
         });
     }

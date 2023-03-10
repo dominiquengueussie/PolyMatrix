@@ -69,7 +69,24 @@
                                     Tableau de bord
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
-                            </a>
+                            </a><br>
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                    <i class="fa-solid fa-stethoscope fs-5 me-2"></i> Gestion des clients
+                                </button>
+                                <ul class="dropdown-menu bg-primary">
+                                    <li><a class="dropdown-item text-white fw-bolder" href="{{ route('clients.index') }}"><i
+                                                class="fa-solid fa-user-doctor text-light fs-5 me-2"></i> Liste de
+                                            clients</a></li>
+                                    <li><a class="dropdown-item text-white fw-bolder"
+                                            href="{{ route('category_client.index') }}"><i
+                                                class="fs-5 fa-solid fa-gears text-light me-2"></i> Catégorie de clients</a>
+                                    </li>
+                                    <li><a class="dropdown-item text-light fw-bolder"
+                                            href="{{ route('type_client.index') }}"><i
+                                                class="fs-5 fa-solid fa-tag text-light me-2"></i> Type de clients</a></li>
+                                </ul>
+                            </div>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="{{ route('users.index') }}" class="nav-link fs-5">
@@ -91,11 +108,11 @@
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link fs-5">
-                                        <i class="fa-solid fa-user-doctor text-light"></i></i>&nbsp;
-                                        <p>Clients</p>
+                                            <i class="fa-sharp fa-solid fa-file-pdf text-light"></i>&nbsp;
+                                        <p>Fiches produits</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                              {{--   <li class="nav-item">
                                     <a href="{{ route('type_client.index') }}" class="nav-link fs-5">
                                         <i class="fa-solid fa-tag text-light"></i>&nbsp;
                                         <p>Type de client</p>
@@ -106,7 +123,7 @@
                                         <i class="fa-solid fa-gears text-light"></i>&nbsp;
                                         <p>Catégorie client</p>
                                     </a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item">
                                     <a href="#" class="nav-link fs-5">
                                         <i class="fa-sharp fa-solid fa-chart-column text-light"></i>&nbsp;

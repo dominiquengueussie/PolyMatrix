@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('poste');
             $table->string('telephone');
             $table->foreignId('agence_id')->constrained()->onDelete('cascade');
-            $table->foreignId('role_id')->constrained()->onDelete('cascade');
+            $table->foreignId('role_id')->constrained('roles')->onDelete('cascade');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

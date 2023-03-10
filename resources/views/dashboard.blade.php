@@ -1,16 +1,13 @@
-<x-app-layout>
+@extends('layouts.partials')
+@section('dashboard')
     <div class="wrapper">
-
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
             </ul>
-
             <ul class="navbar-nav ml-auto">
-
                 <li class="nav-item">
                     <a class="nav-link" data-widget="fullscreen" href="#" role="button">
                         <i class="fas fa-expand-arrows-alt"></i>
@@ -27,7 +24,7 @@
 
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
-            <a href="index3.html" class="brand-link">
+            <a href="{{ route('dashboard') }}" class="brand-link">
                 {{-- <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                     style="opacity: .8"> --}}
                 <span class="brand-text text-center mx-5 font-weight-light">PolyMatrix</span>
@@ -68,6 +65,23 @@
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                    <i class="fa-solid fa-stethoscope fs-5 me-2"></i> Gestion des clients
+                                </button>
+                                <ul class="dropdown-menu bg-primary">
+                                    <li><a class="dropdown-item text-white fw-bolder" href="{{ route('clients.index') }}"><i
+                                                class="fa-solid fa-user-doctor text-light fs-5 me-2"></i> Liste de
+                                            clients</a></li>
+                                    <li><a class="dropdown-item text-white fw-bolder"
+                                            href="{{ route('category_client.index') }}"><i
+                                                class="fs-5 fa-solid fa-gears text-light me-2"></i> Catégorie de clients</a>
+                                    </li>
+                                    <li><a class="dropdown-item text-light fw-bolder"
+                                            href="{{ route('type_client.index') }}"><i
+                                                class="fs-5 fa-solid fa-tag text-light me-2"></i> Type de clients</a></li>
+                                </ul>
+                            </div>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="{{ route('users.index') }}" class="nav-link fs-5">
@@ -88,12 +102,12 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link fs-5">
-                                        <i class="fa-solid fa-user-doctor text-light"></i></i>&nbsp;
-                                        <p>Clients</p>
+                                    <a href="" class="nav-link fs-5">
+                                        <i class="fa-sharp fa-solid fa-file-pdf text-light"></i>&nbsp;
+                                        <p>Fiches produits</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                            {{--     <li class="nav-item">
                                     <a href="{{ route('type_client.index') }}" class="nav-link fs-5">
                                         <i class="fa-solid fa-tag text-light"></i>&nbsp;
                                         <p>Type de client</p>
@@ -104,7 +118,7 @@
                                         <i class="fa-solid fa-gears text-light"></i>&nbsp;
                                         <p>Catégorie client</p>
                                     </a>
-                                </li>
+                                </li> --}}
                                 <li class="nav-item">
                                     <a href="#" class="nav-link fs-5">
                                         <i class="fa-sharp fa-solid fa-chart-column text-light"></i>&nbsp;
@@ -142,7 +156,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link fs-5">
+                                    <a href="{{ route('evaluations_superviseurs.index') }}" class="nav-link fs-5">
                                         <i class="fa-solid fa-user-pen text-light"></i>&nbsp;
                                         <p>Evaluation superviseur</p>
                                     </a>
@@ -369,4 +383,4 @@
 
         </footer>
     </div>
-</x-app-layout>
+@endsection

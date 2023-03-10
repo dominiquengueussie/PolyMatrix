@@ -15,17 +15,16 @@ return new class extends Migration
     {
         Schema::create('objectifs', function (Blueprint $table) {
             $table->id();
-            $table->string('nom objectif');
+            $table->string('nom_objectif');
             $table->string('description');
             $table->string('quartier');
             $table->date('date');
             $table->time('heure');
-            $table->foreignId('client_id')->constrained()->onDelete('cascade');
-            $table->foreignId('categorie_id')->constrained()->onDelete('cascade');
-            $table->foreignId('type_client_id')->constrained()->onDelete('cascade');
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('zone_commerciale_id')->constrained()->onDelete('cascade');
-            $table->id();
+            $table->foreignId('client_id')->constrained('clients')->onDelete('cascade');
+            $table->foreignId('categorie_id')->constrained('categories')->onDelete('cascade');
+            $table->foreignId('type_client_id')->constrained('type_clients')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('zone_commerciale_id')->constrained('zone_commerciales')->onDelete('cascade');
             $table->timestamps();
         });
     }

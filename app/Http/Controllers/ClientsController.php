@@ -24,9 +24,14 @@ class ClientsController extends Controller
         $zones = ZoneCommerciale::all();
         $categories = Categorie::all();
         $types = TypeClient::all();
-        return view('client.index', compact(['clients', 'agences', 'zones','categories','types']));
+        return view('client.index', compact(['clients', 'agences', 'zones', 'categories', 'types']));
     }
 
+
+    public function map($id){
+        $geo = Clients::findOrFail($id);
+        return view('client.map', compact('geo'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -46,17 +51,27 @@ class ClientsController extends Controller
     public function store(Request $request)
     {
         //return dd($request->all());
-        $request->validate([
-            'designation' => 'required',
-            'pays' => 'required',
-            'ville' => 'required',
-            'agence' => 'required',
-            'quartier' => 'required',
-            'zone' => 'required',
-            'typologie' => 'required',
-            'reseau' => 'required',
-            'statut' => 'required',
-        ]);
+        $request->validate(
+            [
+                'designation' => 'required',
+                'pays' => 'required',
+                'ville' => 'required',
+                'agence' => 'required',
+                'quartier' => 'required',
+                'zone' => 'required',
+                'typologie' => 'required',
+                'reseau' => 'required',
+                'statut' => 'required',
+                'statut' => 'required',
+                'type' => 'required',
+                'longitude' => 'required',
+                'categorie' => 'required',
+                'zone' => 'required',
+            ],
+            [
+                'longitude.required' => 'Activer votre localisation(GPS) afin de créer un client.'
+            ]
+        );
         $clients = new Clients();
         $clients->designation = $request->designation;
         $clients->pays = $request->pays;
@@ -89,7 +104,8 @@ class ClientsController extends Controller
      */
     public function show($id)
     {
-        //
+        $client = Clients::findOrFail($id);
+        return view('client.show', compact('client'));
     }
 
     /**
@@ -100,7 +116,13 @@ class ClientsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $client = Clients::findOrFail($id);
+        $agences = Agence::all();
+        $zones = ZoneCommerciale::all();
+        $categories = Categorie::all();
+        $types = TypeClient::all();
+
+        return view('client.edit', compact(['client', 'agences', 'zones', 'categories', 'types']));
     }
 
     /**
@@ -112,7 +134,46 @@ class ClientsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate(
+            [
+                'designation' => 'required',
+                'pays' => 'required',
+                'ville' => 'required',
+                'agence' => 'required',
+                'quartier' => 'required',
+                'zone' => 'required',
+                'typologie' => 'required',
+                'reseau' => 'required',
+                'statut' => 'required',
+                'statut' => 'required',
+                'type' => 'required',
+                'longitude' => 'required',
+                'categorie' => 'required',
+                'zone' => 'required',
+            ],
+            [
+                'longitude.required' => 'Activer votre localisation(GPS) afin de créer un client.'
+            ]
+        );
+        $update = [
+            //"nom" => $request->nom,
+        'designation' => $request->designation,
+        'pays' => $request->pays,
+        'ville'=> $request->ville,
+        'agence_id' => $request->agence,
+        'zone_commerciale_id' => $request->zone,
+        'quartier' => $request->quartier,
+        'typologie' => $request->typologie,
+        'reseau' => $request->reseau,
+        'statut' => $request->statut,
+        'longitude' => $request->longitude,
+        'latitude' => $request->latitude,
+        'categorie_id' =>  $request->categorie,
+        'type_client_id' =>  $request->type,
+        'user_id' => Auth::user()->id,
+        ];
+        Clients::where('id', $id)->update($update);
+        return redirect()->route('clients.index')->with('success', 'Client modifié avec succès');
     }
 
     /**
@@ -123,6 +184,7 @@ class ClientsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Clients::destroy($id);
+        return redirect()->route('clients.index')->with('warning', 'SUCCESS, client supprimé');
     }
 }

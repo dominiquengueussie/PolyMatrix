@@ -97,27 +97,7 @@
         <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
             <div class="container">
                 <div class="row gx-lg-5 align-items-center">
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <ul class="techs">
-                            <li>P</li>
-                            <li>O</li>
-                            <li>L</li>
-                            <li>Y</li>
-                        </ul>
-                        <ul class="conferences">
-                            <li>M</li>
-                            <li>A</li>
-                            <li>T</li>
-                            <li>R</li>
-                            <li>I</li>
-                            <li>X</li>
-                            <li>.</li>
-                            <li>.</li>
-                            <li>.</li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-8 mb-5 mb-lg-0">
+                    <div class="col-lg-12 mb-5 mb-lg-0 shadow-sm">
                         <div class="card">
                             <div class="card-body py-5 px-md-5">
                                 <form method="POST" action="{{ route('register') }}">
@@ -129,7 +109,7 @@
                                                 <label class="form-label" for="nom">Nom</label>
                                                 <input placeholder="nom" value="{{ old('nom') }}" id="nom"
                                                     name="nom" type="text"
-                                                    class="form-control rounded @error('nom') is-invalid @enderror" />
+                                                    class="form-control border border-success rounded @error('nom') is-invalid @enderror" />
                                                 @if ($errors->has('nom'))
                                                     <span style="font-size: 15px;"
                                                         class="text-danger">{{ $errors->first('nom') }}</span>
@@ -141,7 +121,7 @@
                                                 <label class="form-label" for="email">Email</label>
                                                 <input placeholder="email" value="{{ old('email') }}" type="email"
                                                     name="email" id="email"
-                                                    class="form-control rounded @error('email') is-invalid @enderror" />
+                                                    class="form-control border border-success rounded @error('email') is-invalid @enderror" />
                                                 @if ($errors->has('email'))
                                                     <span style="font-size: 15px;"
                                                         class="text-danger">{{ $errors->first('email') }}</span>
@@ -153,7 +133,7 @@
                                                 <label class="form-label" for="poste">Poste</label>
                                                 <input placeholder="poste" value="{{ old('poste') }}" id="poste"
                                                     name="poste" type="text"
-                                                    class="form-control rounded @error('poste') is-invalid @enderror" />
+                                                    class="form-control border border-success rounded @error('poste') is-invalid @enderror" />
                                                 @if ($errors->has('poste'))
                                                     <span style="font-size: 15px;"
                                                         class="text-danger">{{ $errors->first('poste') }}</span>
@@ -164,17 +144,16 @@
                                             <div class="form-outline">
                                                 <label class="agence mb-2" for="agence">Agence</label>
                                                 <select name="agence" id="agence"
-                                                    class="rounded form-select border border-dark">
-                                                    @foreach ($agences as $agence)
-                                                        
-                                                    <option value="{{ $agence->id }}">
+                                                    class="rounded border border-success form-select">
+                                                    @foreach ($agences as $agence)                               
+                                                    <option value="{{ $agence->id }}" {{ old('agence') == $agence->nom ? 'selected' : '' }}>
                                                         {{ $agence->nom }}
                                                     </option>
                                                     @endforeach
                                                 </select>
                                                 @if ($errors->has('agence'))
                                                     <span style="font-size: 15px;"
-                                                        class="text-danger">{{ $errors->first('agence') }}</span>
+                                                        class="text-danger">{{ $errors->first('agence') }} <a class="fw-bolder" href="{{ route('agence.index') }}">créer</a></span>
                                                 @endif
                                             </div>
                                         </div>
@@ -183,7 +162,7 @@
                                                 <label class="form-label" for="telephone">Téléphone</label>
                                                 <input placeholder="téléphone" value="{{ old('phone') }}" id="telephone"
                                                     name="phone" type="text"
-                                                    class="form-control rounded @error('phone') is-invalid @enderror" />
+                                                    class="form-control border border-success rounded @error('phone') is-invalid @enderror" />
                                                 @if ($errors->has('phone'))
                                                     <span style="font-size: 15px;"
                                                         class="text-danger">{{ $errors->first('phone') }}</span>
@@ -194,17 +173,16 @@
                                             <div class="form-outline">
                                                 <label class="agence mb-2" for="agence">Rôle</label>
                                                 <select name="role" id="role"
-                                                    class="rounded form-select border border-dark">
+                                                    class="rounded border border-success form-select">
                                                     @foreach ($roles as $role)
-                                                        
-                                                    <option value="{{ $role->id }}">
+                                                    <option value="{{ $role->id }}" {{ old('role') == $role->nom ? 'selected' : '' }}>
                                                         {{ $role->nom }}
                                                     </option>
                                                     @endforeach
                                                 </select>
                                                 @if ($errors->has('role'))
                                                     <span style="font-size: 15px;"
-                                                        class="text-danger">{{ $errors->first('role') }}</span>
+                                                        class="text-danger">{{ $errors->first('role') }}<a class="fw-bolder" href="{{ route('roles.index') }}">créer</a></span>
                                                 @endif
                                             </div>
                                         </div>
@@ -214,7 +192,7 @@
                                         <label class="form-label" for="adresse">Adresse</label>
                                         <input placeholder="adresse" name="adresse" value="{{ old('adresse') }}"
                                             type="text" id="adresse"
-                                            class="form-control @error('adresse') is-invalid @enderror" />
+                                            class="form-control border border-success @error('adresse') is-invalid @enderror" />
                                         @if ($errors->has('adresse'))
                                             <span style="font-size: 15px;"
                                                 class="text-danger">{{ $errors->first('adresse') }}</span>
@@ -224,7 +202,7 @@
                                         <label class="form-label" for="adresse">Mot de passe</label>
                                         <input placeholder="password" name="password" value="{{ old('password') }}"
                                             type="password" id="password"
-                                            class="form-control @error('password') is-invalid @enderror" />
+                                            class="form-control border border-success @error('password') is-invalid @enderror" />
                                         @if ($errors->has('password'))
                                             <span style="font-size: 15px;"
                                                 class="text-danger">{{ $errors->first('password') }}</span>
@@ -234,7 +212,7 @@
                                         <label class="form-label" for="password_confirmation">Confirmer mot de passe</label>
                                         <input placeholder="confirmer mot de passe" name="password_confirmation" value="{{ old('password_confirmation') }}"
                                             type="password" id="password_confirmation"
-                                            class="form-control @error('password_confirmation') is-invalid @enderror" />
+                                            class="form-control border border-success @error('password_confirmation') is-invalid @enderror" />
                                         @if ($errors->has('password_confirmation'))
                                             <span style="font-size: 15px;"
                                                 class="text-danger">{{ $errors->first('password_confirmation') }}</span>

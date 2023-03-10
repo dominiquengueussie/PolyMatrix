@@ -16,7 +16,7 @@ class Objectifs extends Model
     protected $fillable=
     [
         'id',
-        'nom objectif',
+        'nom_objectif',
         'description',
         'quartier',
         'date',

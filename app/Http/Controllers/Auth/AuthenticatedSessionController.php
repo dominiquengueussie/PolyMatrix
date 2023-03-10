@@ -2,11 +2,17 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\Auth\LoginRequest;
-use App\Providers\RouteServiceProvider;
+use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Models\EvaluationSuperviseur;
+use App\Providers\RouteServiceProvider;
+use App\Http\Requests\Auth\LoginRequest;
+use App\Models\EvaluationSuperviseurExport;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -28,11 +34,21 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request)
     {
-        $request->authenticate();
 
+        $request->authenticate();
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        $user = Auth::user(); // Récupération de l'utilisateur connecté
+        $role = DB::table('users')
+            ->join('roles', 'users.role_id', '=', 'roles.id')
+            ->where('users.id', '=', $user->id)
+            ->select('roles.nom')
+            ->first();
+        $nom_role = $role->nom;
+        if (Str::contains($nom_role, 'Commercial')) {   
+            return  redirect()->route('statistique');
+        }
+        return view('dashboard');
     }
 
     /**

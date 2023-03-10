@@ -2,16 +2,15 @@
 
 namespace App\Models;
 
-use App\Models\User;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
-class EvaluationSuperviseur extends Model
+class EvaluationSuperviseurExport extends Model
 {
-    protected $fillable=
+    protected $fillable =
     [
         'id',
-        'user_id',
+        'evaluation_superviseur_id',
         'nom_manager',
         'preparation',
         'environnement_et_style',
@@ -38,11 +37,9 @@ class EvaluationSuperviseur extends Model
         'note_totale'
     ];
 
-    public function user(){
-        return $this->belongsTo(User::class);
-    }
-    public function evaluations_superviseurs_exports(){
-        return $this->hasMany(EvaluationSuperviseurExport::class);
+    public function user()
+    {
+        return $this->belongsTo(EvaluationSuperviseur::class);
     }
     use HasFactory;
 }

@@ -112,18 +112,6 @@
                                         <p>Fiches produits</p>
                                     </a>
                                 </li>
-                               {{--  <li class="nav-item">
-                                    <a href="{{ route('type_client.index') }}" class="nav-link fs-5">
-                                        <i class="fa-solid fa-tag text-light"></i>&nbsp;
-                                        <p>Type de client</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('category_client.index') }}" class="nav-link fs-5">
-                                        <i class="fa-solid fa-gears text-light"></i>&nbsp;
-                                        <p>Catégorie client</p>
-                                    </a>
-                                </li> --}}
                                 <li class="nav-item">
                                     <a href="#" class="nav-link fs-5">
                                         <i class="fa-sharp fa-solid fa-chart-column text-light"></i>&nbsp;
@@ -161,7 +149,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link fs-5">
+                                    <a href="{{ route('evaluations_superviseurs.index') }}" class="nav-link fs-5">
                                         <i class="fa-solid fa-user-pen text-light"></i>&nbsp;
                                         <p>Evaluation superviseur</p>
                                     </a>
@@ -172,21 +160,23 @@
                     </ul>
                 </nav>
 
-            </div>
         </aside>
 
         <div class="content-wrapper">
-
             <div class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0">Liste des rôles disponible</h1>
+                            <h1 class="m-0">Evaluer un superviseur</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dasboard</a></li>
-                                <li class="breadcrumb-item active"> <a href="{{ route('roles.index') }}">Rôles</a></li>
+                                <li class="breadcrumb-item active"> <span>Evaluation d'un superviseur
+                                    </span></li>
+                                <li class="breadcrumb-item"><a href="{{ route('statistique') }}">voir les
+                                        statistiques</a></li>
+
                             </ol>
                         </div>
                     </div>
@@ -194,54 +184,7 @@
             </div>
 
             <div class="content">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="">
-                                <div class="col-8 mx-auto mt-5">
-                                    @livewire('role-list')
-                                    <!-- Button trigger modal -->
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal" tabindex="-1"
-                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header bg-success">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Créer un rôle</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <form class="row g-3" action="{{ route('roles.store') }}"
-                                                        method="post">
-                                                        @csrf
-                                                        <div class="col-auto">
-                                                            <label for="role" class="visually-hidden">Rôle</label>
-                                                            <input type="text"
-                                                                class="form-control @error('nom') is-invalid @enderror"
-                                                                size="50" value="{{ old('role') }}"
-                                                                name="role" id="role" placeholder="rôle">
-                                                            @if ($errors->has('role'))
-                                                                <span style="font-size: 15px;"
-                                                                    class="text-danger">{{ $errors->first('role') }}</span>
-                                                            @endif
-                                                        </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-bs-dismiss="modal">Fermer</button>
-                                                    <button type="sssubmit" class="btn btn-success">Sauvegarder</button>
-                                                </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--END Modal -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @livewire('e-valuation-superviseur-list')
             </div>
         </div>
         <aside class="control-sidebar control-sidebar-dark">
