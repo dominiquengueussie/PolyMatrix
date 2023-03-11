@@ -31,15 +31,11 @@ class EvaluationSuperviseurController extends Controller
         //
     }
 
+
     public function showAll()
     {
         $evaluations = EvaluationSuperviseur::all();
         return view('evaluation_superviseur.show', compact('evaluations'));
-    }
-
-    public function export()
-    {
-        return view('evaluation_superviseur.export');
     }
 
     public function exportExcel()
@@ -47,6 +43,10 @@ class EvaluationSuperviseurController extends Controller
         return Excel::download(new EvaluationSuperviseurExport, 'evaluation_superviseur.xlsx');
     }
 
+    public function export()
+    {
+        return view('evaluation_superviseur.export');
+    }
 
     /**
      * Store a newly created resource in storage.

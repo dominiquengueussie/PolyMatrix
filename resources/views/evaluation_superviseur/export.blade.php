@@ -6,6 +6,9 @@
             <li class="breadcrumb-item active" aria-current="page">Exporter</li>
         </ol>
     </nav>
+    <form id="export-form" method="POST" action="{{ route('export') }}">
+        @csrf
+    </form>
     <div style="margin-top: 5rem;" class="container py-5">
         <div class="row justify-content-center">
 

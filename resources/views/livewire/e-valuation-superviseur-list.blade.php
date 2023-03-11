@@ -1240,7 +1240,7 @@
                                     </div>
                                     <div class="mb-3 ms-5 col-md-6">
                                         <button type="submit"
-                                            class="btn btn-success btn-lg fw-bolder">Sauvegarder</button>
+                                            class="btn btn-success btn-lg fw-bolder"><i class="fa-regular fa-floppy-disk text-light"></i> Sauvegarder</button>
                                     </div>
                                 </div>
                             </div>

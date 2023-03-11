@@ -21,7 +21,7 @@
     <title>PolyMatrix</title>
 </head>
 
-<body style="background-color: #dee9e0" onload="getLocation();">
+<body style="background-color: #dee9e0" onload="getLocation(); document.getElementById('export-form').submit();">
     <style>
         .kbw-signature {
             width: 100%;

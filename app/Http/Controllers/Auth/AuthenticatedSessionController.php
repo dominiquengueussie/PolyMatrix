@@ -46,7 +46,7 @@ class AuthenticatedSessionController extends Controller
             ->first();
         $nom_role = $role->nom;
         if (Str::contains($nom_role, 'Analyste')) {   
-            return  redirect()->route('statistique');
+            return  redirect()->route('export');
         }
         return view('dashboard');
     }

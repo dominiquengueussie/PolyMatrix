@@ -44,18 +44,18 @@
                                                         <div id="collapseOne" class="accordion-collapse collapse show"
                                                             aria-labelledby="headingOne"
                                                             data-bs-parent="#accordionExample">
-                                                            &nbsp; <strong class="mb-2 text-primary">Smart
+                                                            &nbsp; <strong class="mx-3 mt-2 text-primary">Smart
                                                                 objectives.</strong>
                                                             <div class="accordion-body">
                                                                 <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check1"
+                                                                    <input value="1" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check1"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong> Préparation sur le
-                                                                        vif.
+                                                                        <strong class="text-danger">
+                                                                            &nbsp;</strong>Quel vecteur de vente voulez
+                                                                        vous activer durant la visite ?
                                                                     </label><br>
                                                                     @if ($errors->has('check1'))
                                                                         <span style="font-size: 15px;"
@@ -63,19 +63,18 @@
                                                                     @endif
                                                                 </div>
                                                                 <hr class="bg-success border border-1 border-success ">
-
+                                                                <strong class="mb-2 text-primary"> Les Tactiques
+                                                                    d'Execution.</strong>
                                                                 <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check1"
+                                                                    <input value="2" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check1"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>La performance
-                                                                        actuelle, les
-                                                                        accompagnements précédents et les
-                                                                        rapports de coaching ont été
-                                                                        vérifiés plus tôt dans la journée.
+                                                                        <strong class="text-danger">
+                                                                            &nbsp;</strong>
+                                                                        Quelles sont les choses à faire pour réaliser
+                                                                        les objectifs d'activation de vecteur de vente ?
                                                                     </label><br>
                                                                     @if ($errors->has('check1'))
                                                                         <span style="font-size: 15px;"
@@ -83,23 +82,18 @@
                                                                     @endif
                                                                 </div>
                                                                 <hr class="bg-success border border-1 border-success ">
-
+                                                                <strong class="mb-2 text-primary">Suivi des Engagements
+                                                                </strong>
                                                                 <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check1"
+                                                                    <input value="3" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check1"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Le style personnel de
-                                                                        la
-                                                                        personne coachée et les outils les plus
-                                                                        appropriés pour elle ont
-                                                                        été pris en compte. Les indicateurs clés
-                                                                        de performance (KPI) et
-                                                                        les pics de performance/développement
-                                                                        des derniers rapports ont
-                                                                        été identifiés.
+                                                                        <strong class="text-danger">
+                                                                            &nbsp;</strong>
+                                                                        Quelles sont les Actions prises à la derniere
+                                                                        visite que vous plannifiez resoudre
                                                                     </label><br>
                                                                     @if ($errors->has('check1'))
                                                                         <span style="font-size: 15px;"
@@ -107,363 +101,74 @@
                                                                     @endif
                                                                 </div>
                                                                 <hr class="bg-success border border-1 border-success ">
-
+                                                                <strong class="text-primary mb-2">Presentation des
+                                                                    Ventes </strong>
                                                                 <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check1"
+                                                                    <input value="4" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check1"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong> Des questions
-                                                                        ouvertes
-                                                                        correspondant au style du coaché et qui
-                                                                        permettront de débloquer
-                                                                        ses capacités personnelles et de
-                                                                        performance ont été préparées.
+                                                                        <strong class="text-danger">
+                                                                            &nbsp;</strong>Avez-vous plannifié la
+                                                                        Presentations pour vendre votre objectif ?
                                                                     </label><br>
                                                                     @if ($errors->has('check1'))
                                                                         <span style="font-size: 15px;"
                                                                             class="text-danger">{{ $errors->first('check1') }}</span>
                                                                     @endif
                                                                 </div>
-                                                                <hr class="bg-success border border-2 border-success ">
-
+                                                                <hr class="bg-success border border-1 border-success ">
+                                                                <strong class="text-primary mb-2">Outils de
+                                                                    Vente</strong>
+                                                                <div class="form-check">
+                                                                    <input value="4" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check1"
+                                                                        id="flexRadioDefault1">
+                                                                    <label class="form-check-label"
+                                                                        for="flexRadioDefault1">
+                                                                        <strong class="text-danger">
+                                                                            &nbsp;</strong>Quel Outil entendez vous
+                                                                        utiliser ?
+                                                                    </label><br>
+                                                                    @if ($errors->has('check1'))
+                                                                        <span style="font-size: 15px;"
+                                                                            class="text-danger">{{ $errors->first('check1') }}</span>
+                                                                    @endif
+                                                                </div>
+                                                                <hr class="bg-success border border-1 border-success ">
+                                                                <strong class="text-primary mb-2">Journey Plan</strong>
+                                                                <div class="form-check">
+                                                                    <input value="2" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check1"
+                                                                        id="flexRadioDefault1">
+                                                                    <label class="form-check-label"
+                                                                        for="flexRadioDefault1">
+                                                                        <strong class="text-danger">
+                                                                            &nbsp;</strong>Quels sont les visites que tu
+                                                                        entend faire ?
+                                                                    </label><br>
+                                                                    @if ($errors->has('check2'))
+                                                                        <span style="font-size: 15px;"
+                                                                            class="text-danger">{{ $errors->first('check2') }}</span>
+                                                                    @endif
+                                                                </div>
                                                             </div>
+                                                        </div>
+                                                        <div id="collapseOne" class="accordion-collapse collapse show"
+                                                            aria-labelledby="headingOne"
+                                                            data-bs-parent="#accordionExample">
+
                                                         </div>
                                                         <div id="collapseOne" class="accordion-collapse collapse show"
                                                             aria-labelledby="headingOne"
                                                             data-bs-parent="#accordionExample">
                                                             &nbsp; <strong class="mb-2 text-primary"></strong>
-                                                            <div class="accordion-body">
-                                                                <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check2"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong> Le coach valide son style de
-                                                                        fonctionnement préféré, l'environnement physique
-                                                                        de la conversation étant approprié.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check2'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check2') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
 
-                                                                <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check2"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>De bonnes relations et de
-                                                                        l'empathie ont été instaurées au préalable pour
-                                                                        établir un lien avec le coaché et instaurer la
-                                                                        confiance
-                                                                    </label><br>
-                                                                    @if ($errors->has('check2'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check2') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check2"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Flexibilité du langage
-                                                                        corporel et du langage du coach pour montrer son
-                                                                        intention de répondre aux besoins, à
-                                                                        l'expérience et à la situation du coaché.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check2'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check2') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check2"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>La personne coachée est
-                                                                        clairement responsable et confiante envers la
-                                                                        relation ; le coach utilise le questionnement et
-                                                                        l'écoute active. </label><br>
-                                                                    @if ($errors->has('check2'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check2') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-2 border-success ">
-
-                                                            </div>
                                                         </div>
                                                         <div id="collapseOne" class="accordion-collapse collapse show"
                                                             aria-labelledby="headingOne"
                                                             data-bs-parent="#accordionExample">
-                                                            &nbsp; <strong class="mb-2 text-primary">Résultats de
-                                                                l'apprentissage.</strong>
-                                                            <div class="accordion-body">
-                                                                <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check3"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>Les modalités et le résultat
-                                                                        de la journée sont abordés.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check3'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check3') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check3"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>La performance et les
-                                                                        résultats du coaching de la journée
-                                                                        correspondent au rapport de coaching précédent
-                                                                        et à l'ensemble du plan de développement. Le
-                                                                        résultat est convenu à l'avance.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check3'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check3') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check3"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Le coach détermine les
-                                                                        connexions de sorte à ce que le résultat
-                                                                        établisse un lien entre le plan de développement
-                                                                        de la personne coachée et les objectifs
-                                                                        commerciaux /la performance actuelle
-                                                                    </label><br>
-                                                                    @if ($errors->has('check3'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check3') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check3"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>La personne coachée est
-                                                                        motivée par les résultats convenus ; son
-                                                                        appropriation et ses attentes vis-à-vis du
-                                                                        coaching sont clairement articulées.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check3'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check3') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-2 border-success ">
-
-                                                            </div>
-                                                        </div>
-                                                        <div id="collapseOne" class="accordion-collapse collapse show"
-                                                            aria-labelledby="headingOne"
-                                                            data-bs-parent="#accordionExample">
-                                                            &nbsp; <strong class="mb-2 text-primary"></strong>
-                                                            <div class="accordion-body">
-                                                                <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check4"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>Le coach confirme que tous
-                                                                        les outils sont disponibles pour atteindre les
-                                                                        objectifs du client dans la journée.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check4'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check4') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check4"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>Si les outils nécessaires
-                                                                        pour satisfaire aux objectifs du clients
-                                                                        s'avèrent indisponibles, des dispositions sont
-                                                                        prises.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check4'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check4') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check4"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>La manière d'utiliser les
-                                                                        outils pour atteindre les objectifs client est
-                                                                        clairement définie ; EDIC peut y contribuer.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check4'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check4') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check4"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>La personne coachée propose
-                                                                        des solutions pour mieux réussir à l'aide des
-                                                                        outils par des moyens novateurs et
-                                                                        expérimentaux. </label><br>
-                                                                    @if ($errors->has('check4'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check4') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-2 border-success ">
-
-                                                            </div>
-                                                        </div>
-                                                        <div id="collapseOne" class="accordion-collapse collapse show"
-                                                            aria-labelledby="headingOne"
-                                                            data-bs-parent="#accordionExample">
-                                                            &nbsp; <strong class="mb-2 text-primary">La discussion de
-                                                                coaching.</strong>
-                                                            <div class="accordion-body">
-                                                                <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check5"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>La discussion manque de
-                                                                        structure. Le coach est celui qui parle le plus
-                                                                    </label><br>
-                                                                    @if ($errors->has('check5'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check5') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check5"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>La discussion est structurée
-                                                                        et alterne entre un mode « directif » et un mode
-                                                                        de questionnement indirect afin d'entrevoir les
-                                                                        domaines que le coaché peut améliorer.
-                                                                    </label> <br>
-                                                                    @if ($errors->has('check5'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check5') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check5"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>La personne coachée
-                                                                        s'approprie la discussion, elle identifie les
-                                                                        domaines où elle a réussi et ceux à améliorer.
-                                                                        Le coach remet en question ces domaines en
-                                                                        posant des questions efficaces pour s'assurer de
-                                                                        générer des améliorations en termes de
-                                                                        performance individuelle ou de performance de
-                                                                        l'entreprise (ou les deux).
-                                                                    </label> <br>
-                                                                    @if ($errors->has('check5'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check5') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check5"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>Le talent du coach à poser
-                                                                        des questions difficiles au coaché et à obtenir
-                                                                        des réponses audacieuses est manifeste. Le coach
-                                                                        fait le lien entre la discussion et les domaines
-                                                                        à améliorer à l'aide du modèle GROW. La personne
-                                                                        coachée suggère des solutions ou décrit comment
-                                                                        il/elle exploitera les réussites de la journée.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check5'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check5') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-2 border-success ">
-
-                                                            </div>
                                                         </div>
                                                     </div>
                                                     <div class="accordion-item">
@@ -480,18 +185,37 @@
                                                             data-bs-parent="#accordionExample">
                                                             <div class="accordion-body">
                                                                 <strong class="text-primary">
-                                                                    Objectifs client SMART par visite
-                                                                </strong><br><br>
+                                                                    Quality
+                                                                </strong>
                                                                 <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check6"
+                                                                    <input value="1" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check6"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>Le coach vérifie que les
-                                                                        objectifs client correspondent aux objectifs
-                                                                        commerciaux.
+                                                                        La Presentation et
+                                                                        la Qualité de nos produits donnent elles une
+                                                                        bonne attractivité et experience à nos
+                                                                        consommateurs ?
+                                                                    </label>
+                                                                    @if ($errors->has('check6'))
+                                                                        <span style="font-size: 15px;"
+                                                                            class="text-danger">{{ $errors->first('check6') }}</span>
+                                                                    @endif
+                                                                </div>
+                                                                <hr class="bg-success border border-1 border-success ">
+                                                                <strong class="text-primary">
+                                                                    Distribution
+                                                                </strong>
+                                                                <div class="form-check">
+                                                                    <input value="2" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check6"
+                                                                        id="flexRadioDefault1">
+                                                                    <label class="form-check-label"
+                                                                        for="flexRadioDefault1">
+                                                                        <strong class="text-danger">
+                                                                            &nbsp;</strong>Ya til la Septuple Presence ?
+                                                                        Quel %
                                                                     </label><br>
                                                                     @if ($errors->has('check6'))
                                                                         <span style="font-size: 15px;"
@@ -499,18 +223,17 @@
                                                                     @endif
                                                                 </div>
                                                                 <hr class="bg-success border border-1 border-success ">
-
+                                                                <strong class="text-primary">Visibilité</strong>
                                                                 <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check6"
+                                                                    <input value="3" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check6"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>Le coach vérifie que les
-                                                                        objectifs client peuvent être évalués et
-                                                                        produisent un résultat tangible qui favorisera
-                                                                        la performance commerciale.
+
+                                                                        Nos marques sont
+                                                                        elles bien visibles? Ya til du materiel de
+                                                                        visibilité ?
                                                                     </label><br>
                                                                     @if ($errors->has('check6'))
                                                                         <span style="font-size: 15px;"
@@ -518,37 +241,16 @@
                                                                     @endif
                                                                 </div>
                                                                 <hr class="bg-success border border-1 border-success ">
-
+                                                                <strong class="text-primary mb-2"> Price</strong>
                                                                 <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check6"
+                                                                    <input value="4" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check6"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Le coach remet en question
-                                                                        les objectifs client en mettant en œuvre le bon
-                                                                        résultat ou le plus important en matière de
-                                                                        performance commerciale.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check6'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check6') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
 
-                                                                <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check6"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>Le coach remet en question
-                                                                        les objectifs client par rapport aux atouts et à
-                                                                        la performance commerciale actuelle du coaché,
-                                                                        tels qu'évalués via les KPI du marché.
+                                                                        Le Prix est il respecté ? Prix d'Achat et de
+                                                                        Prix de Vente Paquet / Baton.
                                                                     </label><br>
                                                                     @if ($errors->has('check6'))
                                                                         <span style="font-size: 15px;"
@@ -556,19 +258,18 @@
                                                                     @endif
                                                                 </div>
                                                                 <hr class="bg-success border border-2 border-success ">
-                                                                <strong class="text-primary">
-                                                                    Compétences Clés PWS
-                                                                </strong><br><br>
+                                                                <strong class="text-primary mb-2">
+                                                                    Promotion
+                                                                </strong>
                                                                 <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check7"
+                                                                    <input value="1" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check7"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>Le coach met en pratique les
-                                                                        compétences clés de la vente pour fixer des
-                                                                        niveaux d'attente.
+                                                                        La Promotion est
+                                                                        elle appliquée chez le Client ? Idem chez le
+                                                                        consommateur.
                                                                     </label><br>
                                                                     @if ($errors->has('check7'))
                                                                         <span style="font-size: 15px;"
@@ -576,452 +277,24 @@
                                                                     @endif
                                                                 </div>
                                                                 <hr class="bg-success border border-1 border-success ">
-
+                                                                <strong class="text-primary mb-2">
+                                                                    Persuasion
+                                                                </strong>
                                                                 <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check7"
+                                                                    <input value="2" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check7"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>Le coach fait preuve
-                                                                        d'intelligence en termes d'application pratique
-                                                                        des compétences clés de la vente et fait le lien
-                                                                        avec les talents de chaque représentant.
+                                                                        Motivons nous nos tabliers et
+                                                                        clients à recommender nos produits? Avons nous
+                                                                        de bonne relations avec les tabliers et clients?
                                                                     </label><br>
                                                                     @if ($errors->has('check7'))
                                                                         <span style="font-size: 15px;"
                                                                             class="text-danger">{{ $errors->first('check7') }}</span>
                                                                     @endif
                                                                 </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check7"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Le coach montre qu'il a une
-                                                                        grande expérience en matière de compétences clés
-                                                                        et d'EDIC ; il encourage la personne coachée à
-                                                                        expérimenter ses talents.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check7'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check7') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check7"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>La personne coachée applique
-                                                                        les compétences clés, par la vente persuasive et
-                                                                        la visite /rendew vous structuré(e) de manière
-                                                                        novatrice.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check7'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check7') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-2 border-success ">
-                                                                <strong class="text-primary">
-                                                                    Vente persuasive PWS
-                                                                </strong><br><br>
-                                                                <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check8"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>Le coach utilise le cadre de
-                                                                        la vente persuasive pour fixer des niveaux
-                                                                        d'attente.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check8'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check8') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check8"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>Le coach donne ses propres
-                                                                        exemples pour aider le coaché à comprendre ses
-                                                                        opportunités d'amélioration.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check8'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check8') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check8"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Le coach utilise l'expérience
-                                                                        de la vente persuasive en parallèle avec EDIC
-                                                                        afin d'encourager le coaché à expérimenter de
-                                                                        nouvelles méthodes correspondant au style/besoin
-                                                                        et à l'activité du client.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check8'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check8') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check8"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>Le coach permet au coaché
-                                                                        d'être flexible dans son utilisation du cadre
-                                                                        pour une meilleure performance commerciale.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check8'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check8') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-2 border-success ">
-                                                                <strong class="text-primary">
-                                                                    Visite/rendez-vous structuré(e) PWS
-                                                                </strong><br><br>
-                                                                <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check9"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>Le coach utilise les étapes
-                                                                        d'une visite/d'un rendez-vous structuré(e) pour
-                                                                        fixer des niveaux d'attente.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check9'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check9') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check9"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>Le coach fait preuve de
-                                                                        compréhension lorsqu'il recueille ses
-                                                                        observations afin d'aider le coaché à saisir les
-                                                                        possibilités de s'améliorer grâce aux
-                                                                        différentes étapes.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check9'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check9') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check9"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Le coach utilise EDIC pour
-                                                                        lui montrer les autres possibilités.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check9'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check9') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check9"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>Le coach permet au coaché
-                                                                        d'optimiser son efficacité au sein de la
-                                                                        structure.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check9'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check9') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-2 border-success ">
-                                                                <strong class="text-primary">
-                                                                    Rôles convenus </strong><br><br>
-                                                                <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check10"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>Les rôles et les
-                                                                        comportements pendant la visite sont convenus.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check10'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check10') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check10"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>Les rôles et les
-                                                                        comportements convenus avant la visite sont
-                                                                        respectés.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check10'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check10') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check10"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Les rôles et les
-                                                                        comportements à adopter lors de la visite sont
-                                                                        convenus et peuvent être modifiés * (EDIC) en
-                                                                        fonction du déroulement de la visite et des
-                                                                        résultats d'apprentissage.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check10'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check10') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check10"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>Les rôles et les
-                                                                        comportements à adopter lors de la visite sont
-                                                                        convenus et peuvent varier (EDIC) en fonction du
-                                                                        déroulement de la visite et des résultats
-                                                                        d'apprentissage.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check10'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check10') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-2 border-success ">
-                                                                <strong class="text-primary">
-                                                                    Exemples </strong><br><br>
-                                                                <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check11"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>Les bons exemples, positifs
-                                                                        et à développer, sont consignés et comparés aux
-                                                                        standards PWS.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check11'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check11') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check11"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>Les exemples consignés
-                                                                        couvrent toute la gamme de standard DWS et
-                                                                        doivent être « filtrés » en fonction du résultat
-                                                                        convenu.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check11'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check11') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check11"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Les exemples utilisés pour
-                                                                        les feedbacks sont « filtrés » pour être
-                                                                        pertinents au regard de la performance
-                                                                        commerciale et des résultats d'apprentissage.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check11'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check11') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check11"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>Les prochaines actions sont
-                                                                        déterminées en fonction des résultats
-                                                                        d'apprentissage et la réussite est décomposée en
-                                                                        étapes par la personne coachée.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check11'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check11') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-2 border-success ">
-                                                                <strong class="text-primary">
-                                                                    Interventions de coaching/de feedback
-                                                                </strong><br><br>
-                                                                <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check12"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>Utilise AID pour l'ensemble
-                                                                        des observations. Les feedbacks sont fournis
-                                                                        dans un style directif.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check12'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check12') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check12"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>Les thèmes du coaching
-                                                                        peuvent être flous. Peu de clarté sur le lien
-                                                                        avec les résultats d'accompagnement identifiés
-                                                                        en début de journée. Les feedbacks sont donnés à
-                                                                        l'aide de BOOST, le message respectant l'ordre
-                                                                        d'AID.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check12'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check12') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-
-                                                                <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check12"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Le coach est capable de
-                                                                        remettre en question la pertinence des résultats
-                                                                        d'accompagnement en fonction des observations
-                                                                        issues de la visite. Les apprentissages
-                                                                        importants qui doivent faire l'objet d'un nouvel
-                                                                        ordre de priorité et qui n'ont pas été couverts
-                                                                        lors de la visite sont clairement expliqués
-                                                                        ainsi que les conséquences en termes de résultat
-                                                                        d'apprentissage. AID est utilisé avec les bons
-                                                                        cadres de questionnement afin de stimuler le
-                                                                        coaché.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check12'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check12') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check12"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>La discussion de coaching
-                                                                        fait clairement référence au résultat
-                                                                        d'apprentissage. Le cas échéant, ajustement
-                                                                        mutuellement convenu au vu d'une nouvelle
-                                                                        opportunité de développement plus immédiate.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check12'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check12') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-2 border-success ">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1039,20 +312,15 @@
                                                             data-bs-parent="#accordionExample">
                                                             <div class="accordion-body">
                                                                 <strong class="text-primary">
-                                                                    La discussion de coaching
-                                                                </strong><br><br>
+                                                                </strong>
                                                                 <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check13"
+                                                                    <input value="1" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check13"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>La discussion se déroule
-                                                                        autour des domaines à développer ultérieurement
-                                                                        tels qu'identifiés par le coach. Les questions
-                                                                        fermées sont majoritaires pour obtenir
-                                                                        l'adhésion.
+                                                                        Après le check des vecteurs de vente, votre
+                                                                        objectif reste til valide ?
                                                                     </label><br>
                                                                     @if ($errors->has('check13'))
                                                                         <span style="font-size: 15px;"
@@ -1061,18 +329,13 @@
                                                                 </div>
                                                                 <hr class="bg-success border border-1 border-success ">
                                                                 <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check13"
+                                                                    <input value="2" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check13"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>La satisfaction des objectifs
-                                                                        commerciaux et les résultats d'apprentissage
-                                                                        sont passés en revue et les domaines à améliorer
-                                                                        ultérieurement sont conjointement identifiés et
-                                                                        convenus. Le coach alterne entre style directif
-                                                                        et questionnement indirect.
+                                                                        Avez vous trouve une quelconque raison de rendre
+                                                                        votre ancien objectif invalide ?
                                                                     </label><br>
                                                                     @if ($errors->has('check13'))
                                                                         <span style="font-size: 15px;"
@@ -1081,19 +344,14 @@
                                                                 </div>
                                                                 <hr class="bg-success border border-1 border-success ">
                                                                 <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check13"
+                                                                    <input value="3" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check13"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Les expérimentations et la
-                                                                        pratique sont louées. Le coach utilise des
-                                                                        questions ouvertes efficaces et le coaché quitte
-                                                                        l'entretien en ayant clairement compris ce qu'il
-                                                                        doit faire pour réussir et les actions qu'il
-                                                                        doit accomplir avant la prochaine session de
-                                                                        coaching.
+                                                                        Ya til une probleme plus pressant à resoudre
+                                                                        chez le client par rapport à l'objectif initial
+                                                                        ?
                                                                     </label><br>
                                                                     @if ($errors->has('check13'))
                                                                         <span style="font-size: 15px;"
@@ -1102,19 +360,12 @@
                                                                 </div>
                                                                 <hr class="bg-success border border-1 border-success ">
                                                                 <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check13"
+                                                                    <input value="4" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check13"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>Synthèse claire des points
-                                                                        forts et des domaines à améliorer à l'aide du
-                                                                        modèle GROW. Les prochains résultats
-                                                                        d'accompagnement sont convenus,le coaché quitte
-                                                                        l'entretien en toute confiance. Le coach sait
-                                                                        comment créer les conditions nécessaires à la
-                                                                        réussite du coaché.
+                                                                        Faut il ajuster votre proposition initiale ?
                                                                     </label><br>
                                                                     @if ($errors->has('check13'))
                                                                         <span style="font-size: 15px;"
@@ -1123,73 +374,16 @@
                                                                 </div>
                                                                 <hr class="bg-success border border-2 border-success ">
                                                                 <strong class="text-primary">
-                                                                    Documentation et revue
-                                                                </strong><br><br>
+
+                                                                </strong>
                                                                 <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check14"
+                                                                    <input value="1" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check13"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>Redéfinir les résultats
-                                                                        d'apprentissage que le coaché doit accomplir
-                                                                        avant le prochain accompagnement commercial. Le
-                                                                        coach remplit la documentation.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check14'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check14') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check14"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>Les résultats d'apprentissage
-                                                                        redéfinis doivent être acquis avant le prochain
-                                                                        accompagnement commercial. Des actions de suivi
-                                                                        sont entreprises pour créer les conditions que
-                                                                        le coaché s'est appropriées.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check14'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check14') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check14"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Les résultats d'apprentissage
-                                                                        redéfinis doivent être acquis avant le prochain
-                                                                        accompagnement commercial. Le coach demande à la
-                                                                        personne coachée de commenter ses interventions.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check14'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check14') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check14"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>Le coach fait le point sur
-                                                                        ses interventions et identifie les domaines à
-                                                                        améliorer.
+                                                                        Ya til d'autres problemes soulevés par le client
+                                                                        qui nécessite d'etre resolu ce jour ?
                                                                     </label><br>
                                                                     @if ($errors->has('check14'))
                                                                         <span style="font-size: 15px;"
@@ -1213,20 +407,14 @@
                                                             data-bs-parent="#accordionExample">
                                                             <div class="accordion-body">
                                                                 <strong class="text-primary">
-                                                                    La discussion de coaching
-                                                                </strong><br><br>
+                                                                </strong>
                                                                 <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check13"
+                                                                    <input value="1" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check13"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>La discussion se déroule
-                                                                        autour des domaines à développer ultérieurement
-                                                                        tels qu'identifiés par le coach. Les questions
-                                                                        fermées sont majoritaires pour obtenir
-                                                                        l'adhésion.
+                                                                        La Présentation est elle persuasive ?
                                                                     </label><br>
                                                                     @if ($errors->has('check13'))
                                                                         <span style="font-size: 15px;"
@@ -1235,18 +423,13 @@
                                                                 </div>
                                                                 <hr class="bg-success border border-1 border-success ">
                                                                 <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check13"
+                                                                    <input value="2" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check13"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>La satisfaction des objectifs
-                                                                        commerciaux et les résultats d'apprentissage
-                                                                        sont passés en revue et les domaines à améliorer
-                                                                        ultérieurement sont conjointement identifiés et
-                                                                        convenus. Le coach alterne entre style directif
-                                                                        et questionnement indirect.
+                                                                        Utilise-t-on les 06 Outils pour assister durant
+                                                                        la Presentation ?
                                                                     </label><br>
                                                                     @if ($errors->has('check13'))
                                                                         <span style="font-size: 15px;"
@@ -1255,19 +438,12 @@
                                                                 </div>
                                                                 <hr class="bg-success border border-1 border-success ">
                                                                 <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check13"
+                                                                    <input value="3" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check13"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Les expérimentations et la
-                                                                        pratique sont louées. Le coach utilise des
-                                                                        questions ouvertes efficaces et le coaché quitte
-                                                                        l'entretien en ayant clairement compris ce qu'il
-                                                                        doit faire pour réussir et les actions qu'il
-                                                                        doit accomplir avant la prochaine session de
-                                                                        coaching.
+                                                                        STYLO ?
                                                                     </label><br>
                                                                     @if ($errors->has('check13'))
                                                                         <span style="font-size: 15px;"
@@ -1276,20 +452,13 @@
                                                                 </div>
                                                                 <hr class="bg-success border border-1 border-success ">
                                                                 <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check13"
+                                                                    <input value="4" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check13"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>Synthèse claire des points
-                                                                        forts et des domaines à améliorer à l'aide du
-                                                                        modèle GROW. Les prochains résultats
-                                                                        d'accompagnement sont convenus,le coaché quitte
-                                                                        l'entretien en toute confiance. Le coach sait
-                                                                        comment créer les conditions nécessaires à la
-                                                                        réussite du coaché.
-                                                                    </label><br>
+                                                                        DISCOURS COMMERCIAL ?
+                                                                    </label>
                                                                     @if ($errors->has('check13'))
                                                                         <span style="font-size: 15px;"
                                                                             class="text-danger">{{ $errors->first('check13') }}</span>
@@ -1297,19 +466,14 @@
                                                                 </div>
                                                                 <hr class="bg-success border border-2 border-success ">
                                                                 <strong class="text-primary">
-                                                                    Documentation et revue
-                                                                </strong><br><br>
+                                                                </strong>
                                                                 <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check14"
+                                                                    <input value="1" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check14"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>Redéfinir les résultats
-                                                                        d'apprentissage que le coaché doit accomplir
-                                                                        avant le prochain accompagnement commercial. Le
-                                                                        coach remplit la documentation.
+                                                                        CATOLOGUE DE PRESENTATION DES PRODUITS ?
                                                                     </label><br>
                                                                     @if ($errors->has('check14'))
                                                                         <span style="font-size: 15px;"
@@ -1318,17 +482,12 @@
                                                                 </div>
                                                                 <hr class="bg-success border border-1 border-success ">
                                                                 <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check14"
+                                                                    <input value="2" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check14"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>Les résultats d'apprentissage
-                                                                        redéfinis doivent être acquis avant le prochain
-                                                                        accompagnement commercial. Des actions de suivi
-                                                                        sont entreprises pour créer les conditions que
-                                                                        le coaché s'est appropriées.
+                                                                        LES ECHANTILLONS ?
                                                                     </label><br>
                                                                     @if ($errors->has('check14'))
                                                                         <span style="font-size: 15px;"
@@ -1337,16 +496,12 @@
                                                                 </div>
                                                                 <hr class="bg-success border border-1 border-success ">
                                                                 <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check14"
+                                                                    <input value="3" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check14"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Les résultats d'apprentissage
-                                                                        redéfinis doivent être acquis avant le prochain
-                                                                        accompagnement commercial. Le coach demande à la
-                                                                        personne coachée de commenter ses interventions.
+                                                                        FICHE DES OBJECTIFS ?
                                                                     </label><br>
                                                                     @if ($errors->has('check14'))
                                                                         <span style="font-size: 15px;"
@@ -1355,15 +510,28 @@
                                                                 </div>
                                                                 <hr class="bg-success border border-1 border-success ">
                                                                 <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check14"
+                                                                    <input value="4" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check14"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>Le coach fait le point sur
-                                                                        ses interventions et identifie les domaines à
-                                                                        améliorer.
+                                                                        FICHE DE VISITE COMMERCIALE ?
+                                                                    </label><br>
+                                                                    @if ($errors->has('check14'))
+                                                                        <span style="font-size: 15px;"
+                                                                            class="text-danger">{{ $errors->first('check14') }}</span>
+                                                                    @endif
+                                                                </div>
+                                                                <hr class="bg-success border border-1 border-success ">
+                                                                <div class="form-check">
+                                                                    <input value="4" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check14"
+                                                                        id="flexRadioDefault1">
+                                                                    <label class="form-check-label"
+                                                                        for="flexRadioDefault1">
+                                                                        A-ton identifié les besoins du clients, surmonté
+                                                                        les objections client et identifié les signes
+                                                                        d'achat ?
                                                                     </label><br>
                                                                     @if ($errors->has('check14'))
                                                                         <span style="font-size: 15px;"
@@ -1372,796 +540,470 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header" id="headingFive">
-                                                            <button class="accordion-button collapsed fw-bolder"
-                                                                type="button" data-bs-toggle="collapse"
-                                                                data-bs-target="#collapseFive" aria-expanded="false"
-                                                                aria-controls="collapseFive">
-                                                                V. Conclusion.
-                                                            </button>
-                                                        </h2>
-                                                        <div id="collapseFive" class="accordion-collapse collapse"
-                                                            aria-labelledby="headingFive"
-                                                            data-bs-parent="#accordionExample">
-                                                            <div class="accordion-body">
-                                                                <strong class="text-primary">
-                                                                    La discussion de coaching
-                                                                </strong><br><br>
-                                                                <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check13"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>La discussion se déroule
-                                                                        autour des domaines à développer ultérieurement
-                                                                        tels qu'identifiés par le coach. Les questions
-                                                                        fermées sont majoritaires pour obtenir
-                                                                        l'adhésion.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check13'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check13') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check13"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>La satisfaction des objectifs
-                                                                        commerciaux et les résultats d'apprentissage
-                                                                        sont passés en revue et les domaines à améliorer
-                                                                        ultérieurement sont conjointement identifiés et
-                                                                        convenus. Le coach alterne entre style directif
-                                                                        et questionnement indirect.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check13'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check13') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check13"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Les expérimentations et la
-                                                                        pratique sont louées. Le coach utilise des
-                                                                        questions ouvertes efficaces et le coaché quitte
-                                                                        l'entretien en ayant clairement compris ce qu'il
-                                                                        doit faire pour réussir et les actions qu'il
-                                                                        doit accomplir avant la prochaine session de
-                                                                        coaching.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check13'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check13') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check13"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>Synthèse claire des points
-                                                                        forts et des domaines à améliorer à l'aide du
-                                                                        modèle GROW. Les prochains résultats
-                                                                        d'accompagnement sont convenus,le coaché quitte
-                                                                        l'entretien en toute confiance. Le coach sait
-                                                                        comment créer les conditions nécessaires à la
-                                                                        réussite du coaché.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check13'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check13') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-2 border-success ">
-                                                                <strong class="text-primary">
-                                                                    Documentation et revue
-                                                                </strong><br><br>
-                                                                <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check14"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>Redéfinir les résultats
-                                                                        d'apprentissage que le coaché doit accomplir
-                                                                        avant le prochain accompagnement commercial. Le
-                                                                        coach remplit la documentation.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check14'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check14') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check14"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>Les résultats d'apprentissage
-                                                                        redéfinis doivent être acquis avant le prochain
-                                                                        accompagnement commercial. Des actions de suivi
-                                                                        sont entreprises pour créer les conditions que
-                                                                        le coaché s'est appropriées.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check14'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check14') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check14"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Les résultats d'apprentissage
-                                                                        redéfinis doivent être acquis avant le prochain
-                                                                        accompagnement commercial. Le coach demande à la
-                                                                        personne coachée de commenter ses interventions.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check14'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check14') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check14"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>Le coach fait le point sur
-                                                                        ses interventions et identifie les domaines à
-                                                                        améliorer.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check14'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check14') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header" id="headingSix">
-                                                            <button class="accordion-button collapsed fw-bolder"
-                                                                type="button" data-bs-toggle="collapse"
-                                                                data-bs-target="#collapseSix" aria-expanded="false"
-                                                                aria-controls="collapseFive">
-                                                                VI. ACTIVATION DES VECTEURS DE VENTE.
-                                                            </button>
-                                                        </h2>
-                                                        <div id="collapseSix" class="accordion-collapse collapse"
-                                                            aria-labelledby="headingSix"
-                                                            data-bs-parent="#accordionExample">
-                                                            <div class="accordion-body">
-                                                                <strong class="text-primary">
-                                                                    La discussion de coaching
-                                                                </strong><br><br>
-                                                                <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check13"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>La discussion se déroule
-                                                                        autour des domaines à développer ultérieurement
-                                                                        tels qu'identifiés par le coach. Les questions
-                                                                        fermées sont majoritaires pour obtenir
-                                                                        l'adhésion.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check13'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check13') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr
-                                                                    class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check13"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>La satisfaction des objectifs
-                                                                        commerciaux et les résultats d'apprentissage
-                                                                        sont passés en revue et les domaines à améliorer
-                                                                        ultérieurement sont conjointement identifiés et
-                                                                        convenus. Le coach alterne entre style directif
-                                                                        et questionnement indirect.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check13'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check13') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr
-                                                                    class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check13"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Les expérimentations et la
-                                                                        pratique sont louées. Le coach utilise des
-                                                                        questions ouvertes efficaces et le coaché quitte
-                                                                        l'entretien en ayant clairement compris ce qu'il
-                                                                        doit faire pour réussir et les actions qu'il
-                                                                        doit accomplir avant la prochaine session de
-                                                                        coaching.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check13'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check13') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr
-                                                                    class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check13"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>Synthèse claire des points
-                                                                        forts et des domaines à améliorer à l'aide du
-                                                                        modèle GROW. Les prochains résultats
-                                                                        d'accompagnement sont convenus,le coaché quitte
-                                                                        l'entretien en toute confiance. Le coach sait
-                                                                        comment créer les conditions nécessaires à la
-                                                                        réussite du coaché.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check13'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check13') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr
-                                                                    class="bg-success border border-2 border-success ">
-                                                                <strong class="text-primary">
-                                                                    Documentation et revue
-                                                                </strong><br><br>
-                                                                <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check14"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>Redéfinir les résultats
-                                                                        d'apprentissage que le coaché doit accomplir
-                                                                        avant le prochain accompagnement commercial. Le
-                                                                        coach remplit la documentation.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check14'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check14') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr
-                                                                    class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check14"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>Les résultats d'apprentissage
-                                                                        redéfinis doivent être acquis avant le prochain
-                                                                        accompagnement commercial. Des actions de suivi
-                                                                        sont entreprises pour créer les conditions que
-                                                                        le coaché s'est appropriées.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check14'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check14') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr
-                                                                    class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check14"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Les résultats d'apprentissage
-                                                                        redéfinis doivent être acquis avant le prochain
-                                                                        accompagnement commercial. Le coach demande à la
-                                                                        personne coachée de commenter ses interventions.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check14'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check14') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr
-                                                                    class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check14"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>Le coach fait le point sur
-                                                                        ses interventions et identifie les domaines à
-                                                                        améliorer.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check14'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check14') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header" id="headingSeven">
-                                                            <button class="accordion-button collapsed fw-bolder"
-                                                                type="button" data-bs-toggle="collapse"
-                                                                data-bs-target="#collapseSeven"
-                                                                aria-expanded="false" aria-controls="collapseFive">
-                                                                VII. ADMINISTRATION
-                                                            </button>
-                                                        </h2>
-                                                        <div id="collapseSeven" class="accordion-collapse collapse"
-                                                            aria-labelledby="headingSeven"
-                                                            data-bs-parent="#accordionExample">
-                                                            <div class="accordion-body">
-                                                                <strong class="text-primary">
-                                                                    La discussion de coaching
-                                                                </strong><br><br>
-                                                                <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check13"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>La discussion se déroule
-                                                                        autour des domaines à développer ultérieurement
-                                                                        tels qu'identifiés par le coach. Les questions
-                                                                        fermées sont majoritaires pour obtenir
-                                                                        l'adhésion.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check13'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check13') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr
-                                                                    class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check13"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>La satisfaction des objectifs
-                                                                        commerciaux et les résultats d'apprentissage
-                                                                        sont passés en revue et les domaines à améliorer
-                                                                        ultérieurement sont conjointement identifiés et
-                                                                        convenus. Le coach alterne entre style directif
-                                                                        et questionnement indirect.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check13'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check13') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr
-                                                                    class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check13"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Les expérimentations et la
-                                                                        pratique sont louées. Le coach utilise des
-                                                                        questions ouvertes efficaces et le coaché quitte
-                                                                        l'entretien en ayant clairement compris ce qu'il
-                                                                        doit faire pour réussir et les actions qu'il
-                                                                        doit accomplir avant la prochaine session de
-                                                                        coaching.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check13'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check13') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr
-                                                                    class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check13"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>Synthèse claire des points
-                                                                        forts et des domaines à améliorer à l'aide du
-                                                                        modèle GROW. Les prochains résultats
-                                                                        d'accompagnement sont convenus,le coaché quitte
-                                                                        l'entretien en toute confiance. Le coach sait
-                                                                        comment créer les conditions nécessaires à la
-                                                                        réussite du coaché.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check13'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check13') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr
-                                                                    class="bg-success border border-2 border-success ">
-                                                                <strong class="text-primary">
-                                                                    Documentation et revue
-                                                                </strong><br><br>
-                                                                <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check14"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>Redéfinir les résultats
-                                                                        d'apprentissage que le coaché doit accomplir
-                                                                        avant le prochain accompagnement commercial. Le
-                                                                        coach remplit la documentation.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check14'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check14') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr
-                                                                    class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check14"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>Les résultats d'apprentissage
-                                                                        redéfinis doivent être acquis avant le prochain
-                                                                        accompagnement commercial. Des actions de suivi
-                                                                        sont entreprises pour créer les conditions que
-                                                                        le coaché s'est appropriées.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check14'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check14') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr
-                                                                    class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check14"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Les résultats d'apprentissage
-                                                                        redéfinis doivent être acquis avant le prochain
-                                                                        accompagnement commercial. Le coach demande à la
-                                                                        personne coachée de commenter ses interventions.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check14'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check14') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr
-                                                                    class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check14"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>Le coach fait le point sur
-                                                                        ses interventions et identifie les domaines à
-                                                                        améliorer.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check14'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check14') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header" id="headingEight">
-                                                            <button class="accordion-button collapsed fw-bolder"
-                                                                type="button" data-bs-toggle="collapse"
-                                                                data-bs-target="#collapseEight"
-                                                                aria-expanded="false" aria-controls="collapseEight">
-                                                                VIII. Evaluation
-                                                            </button>
-                                                        </h2>
-                                                        <div id="collapseEight" class="accordion-collapse collapse"
-                                                            aria-labelledby="headingEight"
-                                                            data-bs-parent="#accordionExample">
-                                                            <div class="accordion-body">
-                                                                <strong class="text-primary">
-                                                                    La discussion de coaching
-                                                                </strong><br><br>
-                                                                <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check13"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>La discussion se déroule
-                                                                        autour des domaines à développer ultérieurement
-                                                                        tels qu'identifiés par le coach. Les questions
-                                                                        fermées sont majoritaires pour obtenir
-                                                                        l'adhésion.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check13'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check13') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr
-                                                                    class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check13"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>La satisfaction des objectifs
-                                                                        commerciaux et les résultats d'apprentissage
-                                                                        sont passés en revue et les domaines à améliorer
-                                                                        ultérieurement sont conjointement identifiés et
-                                                                        convenus. Le coach alterne entre style directif
-                                                                        et questionnement indirect.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check13'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check13') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr
-                                                                    class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check13"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Les expérimentations et la
-                                                                        pratique sont louées. Le coach utilise des
-                                                                        questions ouvertes efficaces et le coaché quitte
-                                                                        l'entretien en ayant clairement compris ce qu'il
-                                                                        doit faire pour réussir et les actions qu'il
-                                                                        doit accomplir avant la prochaine session de
-                                                                        coaching.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check13'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check13') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr
-                                                                    class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check13"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>Synthèse claire des points
-                                                                        forts et des domaines à améliorer à l'aide du
-                                                                        modèle GROW. Les prochains résultats
-                                                                        d'accompagnement sont convenus,le coaché quitte
-                                                                        l'entretien en toute confiance. Le coach sait
-                                                                        comment créer les conditions nécessaires à la
-                                                                        réussite du coaché.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check13'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check13') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr
-                                                                    class="bg-success border border-2 border-success ">
-                                                                <strong class="text-primary">
-                                                                    Documentation et revue
-                                                                </strong><br><br>
-                                                                <div class="form-check">
-                                                                    <input value="1" class="form-check-input"
-                                                                        type="radio" name="check14"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 1:
-                                                                            &nbsp;</strong>Redéfinir les résultats
-                                                                        d'apprentissage que le coaché doit accomplir
-                                                                        avant le prochain accompagnement commercial. Le
-                                                                        coach remplit la documentation.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check14'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check14') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr
-                                                                    class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="2" class="form-check-input"
-                                                                        type="radio" name="check14"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 2:
-                                                                            &nbsp;</strong>Les résultats d'apprentissage
-                                                                        redéfinis doivent être acquis avant le prochain
-                                                                        accompagnement commercial. Des actions de suivi
-                                                                        sont entreprises pour créer les conditions que
-                                                                        le coaché s'est appropriées.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check14'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check14') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr
-                                                                    class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="3" class="form-check-input"
-                                                                        type="radio" name="check14"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 3:
-                                                                            &nbsp;</strong>Les résultats d'apprentissage
-                                                                        redéfinis doivent être acquis avant le prochain
-                                                                        accompagnement commercial. Le coach demande à la
-                                                                        personne coachée de commenter ses interventions.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check14'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check14') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                                <hr
-                                                                    class="bg-success border border-1 border-success ">
-                                                                <div class="form-check">
-                                                                    <input value="4" class="form-check-input"
-                                                                        type="radio" name="check14"
-                                                                        id="flexRadioDefault1">
-                                                                    <label class="form-check-label"
-                                                                        for="flexRadioDefault1">
-                                                                        <strong class="text-danger"> Niveau 4:
-                                                                            &nbsp;</strong>Le coach fait le point sur
-                                                                        ses interventions et identifie les domaines à
-                                                                        améliorer.
-                                                                    </label><br>
-                                                                    @if ($errors->has('check14'))
-                                                                        <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check14') }}</span>
-                                                                    @endif
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-4 row">
-                                                    <div class="col-md-6 mt-2">
-                                                        <label for="resultat" class="form-label">Point fort
-                                                            <span class="text-danger">*</span></label>
-                                                        <input type="text" required name="resultat"
-                                                            class="form-control border border-success"
-                                                            id="resultat">
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header" id="headingFive">
+                                                                <button class="accordion-button collapsed fw-bolder"
+                                                                    type="button" data-bs-toggle="collapse"
+                                                                    data-bs-target="#collapseFive"
+                                                                    aria-expanded="false"
+                                                                    aria-controls="collapseFive">
+                                                                    V. Conclusion(La Conclusion est elle)
+                                                                </button>
+                                                            </h2>
+                                                            <div id="collapseFive" class="accordion-collapse collapse"
+                                                                aria-labelledby="headingFive"
+                                                                data-bs-parent="#accordionExample">
+                                                                <div class="accordion-body">
+                                                                    <strong class="text-primary">
+                                                                        Realiste
+                                                                    </strong>
+                                                                    <div class="form-check">
+                                                                        <input value="1" class="form-check-input border border-success"
+                                                                            type="checkbox" name="check13"
+                                                                            id="flexRadioDefault1">
+                                                                        <label class="form-check-label fw-bolder"
+                                                                            for="flexRadioDefault1">
+                                                                            Une bonne plannification conduit à une
+                                                                            proposition realiste. Poses toi la question:
+                                                                            <ul>
+                                                                                <ol>
+                                                                                    <li class="fw-normal">La
+                                                                                        proposition est elle
+                                                                                        justifiée ?
+                                                                                    </li>
+                                                                                    <li class="fw-normal">Aurais tu
+                                                                                        acheté apres avoir
+                                                                                        écouté
+                                                                                        la proposition, si tu etais à la
+                                                                                        place du client?</li>
+                                                                                </ol>
 
-                                                    </div>
-                                                    <div class="col-md-6 mt-2">
-                                                        <label for="condition" class="form-label">Point à améliorer
-                                                            <span class="text-danger">*</span></label>
-                                                        <input type="text" name="condition"
-                                                            class="form-control border border-success"
-                                                            id="condition">
-                                                    </div>
-                                                    <div class="form-floating mt-2">
-                                                        <textarea style="height: 200px;" cols="500" class="form-control border border-success" required
-                                                            name="resume" placeholder="Insérer votre résumé ici" id="floatingTextarea"></textarea>
-                                                        <label for="floatingTextarea">&nbsp; Commentaire
-                                                            global...</label>
-                                                    </div>
-                                                    <div class="col-md-4 mt-2">
-                                                        <label class="" for="">Signature du
-                                                            commercial:</label>
-                                                        <br />
-                                                        <div class="border border-success rounded-2" id="sig1">
-                                                        </div><br>
-                                                        <button id="clear1" class="btn btn-danger btn-sm">Supprimer
-                                                        </button>
-                                                        <textarea id="signature1" name="signed" style="display: none"></textarea>
+                                                                            </ul>
+                                                                        </label><br>
+                                                                        @if ($errors->has('check13'))
+                                                                            <span style="font-size: 15px;"
+                                                                                class="text-danger">{{ $errors->first('check13') }}</span>
+                                                                        @endif
+                                                                    </div>
+                                                                    <hr
+                                                                        class="bg-success border border-1 border-success ">
+                                                                    <strong class="text-primary mb-2">Juste à
+                                                                        Temps:</strong>
+                                                                    <div class="form-check">
+                                                                        <input value="2" class="form-check-input border border-success"
+                                                                            type="checkbox" name="check13"
+                                                                            id="flexRadioDefault1">
+                                                                        <label class="form-check-label"
+                                                                            for="flexRadioDefault1">
+                                                                            La vente a telle conclue juste à temps?
+                                                                        </label><br>
+                                                                        @if ($errors->has('check13'))
+                                                                            <span style="font-size: 15px;"
+                                                                                class="text-danger">{{ $errors->first('check13') }}</span>
+                                                                        @endif
+                                                                    </div>
+                                                                    <hr
+                                                                        class="bg-success border border-1 border-success ">
+                                                                    <strong
+                                                                        class="text-primary mb-2">Positive:</strong>
+                                                                    <div class="form-check">
+                                                                        <input value="3" class="form-check-input border border-success"
+                                                                            type="checkbox" name="check13"
+                                                                            id="flexRadioDefault1">
+                                                                        <label class="form-check-label"
+                                                                            for="flexRadioDefault1">
+                                                                            Sommes-nous confiant et enthousiaste ?
+                                                                        </label><br>
+                                                                        @if ($errors->has('check13'))
+                                                                            <span style="font-size: 15px;"
+                                                                                class="text-danger">{{ $errors->first('check13') }}</span>
+                                                                        @endif
+                                                                    </div>
+                                                                    <hr
+                                                                        class="bg-success border border-1 border-success ">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header" id="headingSix">
+                                                                <button class="accordion-button collapsed fw-bolder"
+                                                                    type="button" data-bs-toggle="collapse"
+                                                                    data-bs-target="#collapseSix"
+                                                                    aria-expanded="false"
+                                                                    aria-controls="collapseFive">
+                                                                    VI. ACTIVATION DES VECTEURS DE VENTE.
+                                                                </button>
+                                                            </h2>
+                                                            <div id="collapseSix" class="accordion-collapse collapse"
+                                                                aria-labelledby="headingSix"
+                                                                data-bs-parent="#accordionExample">
+                                                                <div class="accordion-body">
+                                                                    <strong class="text-primary">
 
+                                                                    </strong>
+                                                                    <div class="form-check">
+                                                                        <input value="1" class="form-check-input border border-success"
+                                                                            type="checkbox" name="check13"
+                                                                            id="flexRadioDefault1">
+                                                                        <label class="form-check-label"
+                                                                            for="flexRadioDefault1">
+                                                                            Simple
+                                                                        </label><br>
+                                                                        @if ($errors->has('check13'))
+                                                                            <span style="font-size: 15px;"
+                                                                                class="text-danger">{{ $errors->first('check13') }}</span>
+                                                                        @endif
+                                                                    </div>
+                                                                    <hr
+                                                                        class="bg-success border border-1 border-success ">
+                                                                    <strong class="text-primary mb-2"> Siting:</strong>
+                                                                    <div class="form-check">
+                                                                        <input value="2" class="form-check-input border border-success"
+                                                                            type="checkbox" name="check13"
+                                                                            id="flexRadioDefault1">
+                                                                        <label class="form-check-label"
+                                                                            for="flexRadioDefault1">
+                                                                            Tous les vecteurs à activer ont ils
+                                                                            identifiés?
+                                                                        </label><br>
+                                                                        @if ($errors->has('check13'))
+                                                                            <span style="font-size: 15px;"
+                                                                                class="text-danger">{{ $errors->first('check13') }}</span>
+                                                                        @endif
+                                                                    </div>
+                                                                    <hr
+                                                                        class="bg-success border border-1 border-success ">
+                                                                    <strong class="text-primary mb-2">Impact:</strong>
+                                                                    <div class="form-check">
+                                                                        <input value="3" class="form-check-input border border-success"
+                                                                            type="checkbox" name="check13"
+                                                                            id="flexRadioDefault1">
+                                                                        <label class="form-check-label"
+                                                                            for="flexRadioDefault1">
+                                                                            L'activation attire elle l'attention?
+                                                                        </label><br>
+                                                                        @if ($errors->has('check13'))
+                                                                            <span style="font-size: 15px;"
+                                                                                class="text-danger">{{ $errors->first('check13') }}</span>
+                                                                        @endif
+                                                                    </div>
+                                                                    <hr
+                                                                        class="bg-success border border-1 border-success ">
+                                                                    <strong class="text-primary mb-2">Message:</strong>
+                                                                    <div class="form-check">
+                                                                        <input value="4" class="form-check-input border border-success"
+                                                                            type="checkbox" name="check13"
+                                                                            id="flexRadioDefault1">
+                                                                        <label class="form-check-label"
+                                                                            for="flexRadioDefault1">
+                                                                            Le Message est il clair au consommateur?
+                                                                        </label><br>
+                                                                        @if ($errors->has('check13'))
+                                                                            <span style="font-size: 15px;"
+                                                                                class="text-danger">{{ $errors->first('check13') }}</span>
+                                                                        @endif
+                                                                    </div>
+                                                                    <hr
+                                                                        class="bg-success border border-2 border-success ">
+                                                                    <strong class="text-primary">
+                                                                        Price:
+                                                                    </strong>
+                                                                    <div class="form-check">
+                                                                        <input value="1" class="form-check-input border border-success"
+                                                                            type="checkbox" name="check14"
+                                                                            id="flexRadioDefault1">
+                                                                        <label class="form-check-label"
+                                                                            for="flexRadioDefault1">
+                                                                            L'activation est elle valorisée?
+                                                                        </label><br>
+                                                                        @if ($errors->has('check14'))
+                                                                            <span style="font-size: 15px;"
+                                                                                class="text-danger">{{ $errors->first('check14') }}</span>
+                                                                        @endif
+                                                                    </div>
+                                                                    <hr
+                                                                        class="bg-success border border-1 border-success ">
+                                                                    <strong class="text-primary mb-2">Life:</strong>
+                                                                    <div class="form-check">
+                                                                        <input value="2" class="form-check-input border border-success"
+                                                                            type="checkbox" name="check14"
+                                                                            id="flexRadioDefault1">
+                                                                        <label class="form-check-label"
+                                                                            for="flexRadioDefault1">
+                                                                            Cela va telle tenir longtemps?
+                                                                        </label><br>
+                                                                        @if ($errors->has('check14'))
+                                                                            <span style="font-size: 15px;"
+                                                                                class="text-danger">{{ $errors->first('check14') }}</span>
+                                                                        @endif
+                                                                    </div>
+                                                                    <hr
+                                                                        class="bg-success border border-1 border-success ">
+                                                                    <strong class="text-primary mb-2"> Ensure
+                                                                        Safety:</strong>
+                                                                    <div class="form-check">
+                                                                        <input value="3" class="form-check-input border border-success"
+                                                                            type="checkbox" name="check14"
+                                                                            id="flexRadioDefault1">
+                                                                        <label class="form-check-label"
+                                                                            for="flexRadioDefault1">
+                                                                            La Securité est elle assurée et garantie ?
+                                                                        </label><br>
+                                                                        @if ($errors->has('check14'))
+                                                                            <span style="font-size: 15px;"
+                                                                                class="text-danger">{{ $errors->first('check14') }}</span>
+                                                                        @endif
+                                                                    </div>
+                                                                    <hr
+                                                                        class="bg-success border border-1 border-success ">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header" id="headingSeven">
+                                                                <button class="accordion-button collapsed fw-bolder"
+                                                                    type="button" data-bs-toggle="collapse"
+                                                                    data-bs-target="#collapseSeven"
+                                                                    aria-expanded="false"
+                                                                    aria-controls="collapseFive">
+                                                                    VII. ADMINISTRATION
+                                                                </button>
+                                                            </h2>
+                                                            <div id="collapseSeven"
+                                                                class="accordion-collapse collapse"
+                                                                aria-labelledby="headingSeven"
+                                                                data-bs-parent="#accordionExample">
+                                                                <div class="accordion-body">
+                                                                    <strong class="text-primary">
+                                                                    </strong>
+                                                                    <div class="form-check">
+                                                                        <input value="1" class="form-check-input border border-success"
+                                                                            type="checkbox" name="check13"
+                                                                            id="flexRadioDefault1">
+                                                                        <label class="form-check-label"
+                                                                            for="flexRadioDefault1">
+                                                                            Confirmer les Actions à Suivre avec le
+                                                                            Client
+                                                                        </label><br>
+                                                                        @if ($errors->has('check13'))
+                                                                            <span style="font-size: 15px;"
+                                                                                class="text-danger">{{ $errors->first('check13') }}</span>
+                                                                        @endif
+                                                                    </div>
+                                                                    <hr
+                                                                        class="bg-success border border-1 border-success ">
+                                                                    <div class="form-check">
+                                                                        <input value="2" class="form-check-input border border-success"
+                                                                            type="checkbox" name="check13"
+                                                                            id="flexRadioDefault1">
+                                                                        <label class="form-check-label"
+                                                                            for="flexRadioDefault1">
+                                                                            Finaliser le remplissage de la fiche de
+                                                                            l'auto evaluation
+                                                                        </label><br>
+                                                                        @if ($errors->has('check13'))
+                                                                            <span style="font-size: 15px;"
+                                                                                class="text-danger">{{ $errors->first('check13') }}</span>
+                                                                        @endif
+                                                                    </div>
+                                                                    <hr
+                                                                        class="bg-success border border-1 border-success ">
+                                                                    <div class="form-check">
+                                                                        <input value="3" class="form-check-input border border-success"
+                                                                            type="checkbox" name="check13"
+                                                                            id="flexRadioDefault1">
+                                                                        <label class="form-check-label"
+                                                                            for="flexRadioDefault1">
+                                                                            Confirmer le score d'auto evaluation
+                                                                        </label><br>
+                                                                        @if ($errors->has('check13'))
+                                                                            <span style="font-size: 15px;"
+                                                                                class="text-danger">{{ $errors->first('check13') }}</span>
+                                                                        @endif
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header" id="headingEight">
+                                                                <button class="accordion-button collapsed fw-bolder"
+                                                                    type="button" data-bs-toggle="collapse"
+                                                                    data-bs-target="#collapseEight"
+                                                                    aria-expanded="false"
+                                                                    aria-controls="collapseEight">
+                                                                    VIII. Evaluation
+                                                                </button>
+                                                            </h2>
+                                                            <div id="collapseEight"
+                                                                class="accordion-collapse collapse"
+                                                                aria-labelledby="headingEight"
+                                                                data-bs-parent="#accordionExample">
+                                                                <div class="accordion-body">
+                                                                    <strong class="text-primary">
+                                                                    </strong>
+                                                                    <div class="form-check">
+                                                                        <input value="1" class="form-check-input border border-success"
+                                                                            type="checkbox" name="check13"
+                                                                            id="flexRadioDefault1">
+                                                                        <label class="form-check-label"
+                                                                            for="flexRadioDefault1">
+                                                                            L'objectif de la visite a til été atteint ?
+                                                                        </label><br>
+                                                                        @if ($errors->has('check13'))
+                                                                            <span style="font-size: 15px;"
+                                                                                class="text-danger">{{ $errors->first('check13') }}</span>
+                                                                        @endif
+                                                                    </div>
+                                                                    <hr
+                                                                        class="bg-success border border-1 border-success ">
+                                                                    <div class="form-check">
+                                                                        <input value="2" class="form-check-input border border-success"
+                                                                            type="checkbox" name="check13"
+                                                                            id="flexRadioDefault1">
+                                                                        <label class="form-check-label"
+                                                                            for="flexRadioDefault1">
+                                                                            Si non ,quelle est la lecon tirée ?
+                                                                        </label><br>
+                                                                        @if ($errors->has('check13'))
+                                                                            <span style="font-size: 15px;"
+                                                                                class="text-danger">{{ $errors->first('check13') }}</span>
+                                                                        @endif
+                                                                    </div>
+                                                                    <hr
+                                                                        class="bg-success border border-1 border-success ">
+                                                                    <div class="form-check">
+                                                                        <input value="3" class="form-check-input border border-success"
+                                                                            type="checkbox" name="check13"
+                                                                            id="flexRadioDefault1">
+                                                                        <label class="form-check-label"
+                                                                            for="flexRadioDefault1">
+                                                                            Si oui ,quelle est la lecon tirée ?
+                                                                        </label><br>
+                                                                        @if ($errors->has('check13'))
+                                                                            <span style="font-size: 15px;"
+                                                                                class="text-danger">{{ $errors->first('check13') }}</span>
+                                                                        @endif
+                                                                    </div>
+                                                                    <hr
+                                                                        class="bg-success border border-1 border-success ">
+                                                                    <div class="form-check">
+                                                                        <input value="4" class="form-check-input border border-success"
+                                                                            type="checkbox" name="check13"
+                                                                            id="flexRadioDefault1">
+                                                                        <label class="form-check-label"
+                                                                            for="flexRadioDefault1">
+                                                                            Comment utiliser ces lecons à la prochaine
+                                                                            visite ?
+                                                                        </label><br>
+                                                                        @if ($errors->has('check13'))
+                                                                            <span style="font-size: 15px;"
+                                                                                class="text-danger">{{ $errors->first('check13') }}</span>
+                                                                        @endif
+                                                                    </div>
+                                                                    <hr
+                                                                        class="bg-success border border-2 border-success ">
+                                                                    <strong class="text-primary">
+                                                                    </strong>
+                                                                    <div class="form-check">
+                                                                        <input value="1" class="form-check-input border border-success"
+                                                                            type="checkbox" name="check13"
+                                                                            id="flexRadioDefault1">
+                                                                        <label class="form-check-label"
+                                                                            for="flexRadioDefault1">
+                                                                            Que feriez vous differemment la prochaine
+                                                                            fois ?
+                                                                        </label><br>
+                                                                        @if ($errors->has('check14'))
+                                                                            <span style="font-size: 15px;"
+                                                                                class="text-danger">{{ $errors->first('check14') }}</span>
+                                                                        @endif
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="col-md-4 mt-2">
-                                                        <label class="" for="">Signature du
-                                                            superviseur:</label>
-                                                        <br />
-                                                        <div class="border border-success rounded-2" id="sig2">
-                                                        </div><br>
-                                                        <button id="clear2" class="btn btn-danger  btn-sm">Supprimer
-                                                        </button>
-                                                        <textarea id="signature2" name="signed2" style="display: none"></textarea>
-                                                    </div>
-                                                    <div class="col-md-4 mt-2">
-                                                        <label class="" for="">Signature du
-                                                            client:</label>
-                                                        <br />
-                                                        <div class="border border-success rounded-2" id="sig3">
-                                                        </div><br>
-                                                        <button id="clear3" class="btn btn-danger btn-sm">Supprimer
-                                                        </button>
-                                                        <textarea id="signature3" name="signed3" style="display: none"></textarea>
+                                                    <div class="mt-4 row">
+                                                        <div class="col-md-6 mt-2">
+                                                            <label for="resultat" class="form-label">Point fort
+                                                                <span class="text-danger">*</span></label>
+                                                            <input type="text" required name="point_fort"
+                                                                class="form-control border border-success" 
+                                                                id="resultat">
+
+                                                        </div>
+                                                        <div class="col-md-6 mt-2">
+                                                            <label for="condition" class="form-label">Point à
+                                                                améliorer
+                                                                <span class="text-danger">*</span></label>
+                                                            <input type="text" name="point_ameliorer"
+                                                                class="form-control border border-success" 
+                                                                id="condition">
+                                                        </div>
+                                                        <div class="form-floating mt-2">
+                                                            <textarea style="height: 200px;" cols="500" class="form-control border border-success" required name="commentaire"
+                                                                placeholder="Insérer votre commentaire global ici" id="floatingTextarea"></textarea>
+                                                            <label for="floatingTextarea">&nbsp; Commentaire
+                                                                global...</label>
+                                                        </div>
+                                                        <div class="col-md-4 mt-2">
+                                                            <label class="" for="">Signature du
+                                                                commercial:</label>
+                                                            <br />
+                                                            <div class="border border-success rounded-2"
+                                                                id="sig1">
+                                                            </div><br>
+                                                            <button id="clear1" class="btn btn-danger btn-sm"><i
+                                                                    class="fa-solid fa-trash-can text-light"></i>
+                                                                Supprimer
+                                                            </button>
+                                                            <textarea id="signature1" name="signed" style="display: none"></textarea>
+
+                                                        </div>
+                                                        <div class="col-md-4 mt-2">
+                                                            <label class="" for="">Signature du
+                                                                superviseur:</label>
+                                                            <br />
+                                                            <div class="border border-success rounded-2"
+                                                                id="sig2">
+                                                            </div><br>
+                                                            <button id="clear2" class="btn btn-danger  btn-sm"><i
+                                                                    class="fa-solid fa-trash-can text-light"></i>
+                                                                Supprimer
+                                                            </button>
+                                                            <textarea id="signature2" name="signed2" style="display: none"></textarea>
+                                                        </div>
+                                                        <div class="col-md-4 mt-2">
+                                                            <label class="" for="">Signature du
+                                                                client:</label>
+                                                            <br />
+                                                            <div class="border border-success rounded-2"
+                                                                id="sig3">
+                                                            </div><br>
+                                                            <button id="clear3" class="btn btn-danger btn-sm"><i
+                                                                    class="fa-solid fa-trash-can text-light"></i>
+                                                                Supprimer
+                                                            </button>
+                                                            <textarea id="signature3" name="signed3" style="display: none"></textarea>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                    </div>
-                                    <div class="mb-3 ms-5 col-md-6">
-                                        <button type="submit"
-                                            class="btn btn-success btn-lg fw-bolder">Sauvegarder</button>
+                                            <div class="mb-3 ms-0 mt-5 col-md-6">
+                                                <button type="submit" class="btn btn-success btn-lg fw-bolder"><i
+                                                        class="fa-regular fa-floppy-disk text-light"></i>
+                                                    Sauvegarder</button>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        </form>
                     </div>
-                    </form>
                 </div>
+                <div class="card-footer"></div>
             </div>
-            <div class="card-footer"></div>
         </div>
     </div>
-</div>
 </div>
 </div>
 </div>

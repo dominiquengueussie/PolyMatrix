@@ -1,15 +1,15 @@
 @extends('layouts.master')
 
 @section('content')
-<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="{{ route('evaluations_superviseurs.index')}}">Evaluations superviseurs</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Statistiques des superviseurs</li>
-    <li class="breadcrumb-item" aria-current="page"><a class="" href="{{ route('export') }}"><i class="fa-solid fa-arrow-up-long fw-bolder"></i> Exporter</a></li>
-  </ol>
-</nav>
-
-
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ route('evaluations_superviseurs.index') }}">Evaluations superviseurs</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Statistiques des superviseurs</li>
+            <li class="breadcrumb-item" aria-current="page"><a class="" href="{{ route('export') }}"><i
+                        class="fa-solid fa-arrow-up-long fw-bolder"></i> Exporter</a></li>
+        </ol>
+    </nav>
     <div class="mt-5">
         <table class="table table-hover table-striped table-bordered border border-3 text-center">
             <thead>
@@ -47,7 +47,7 @@
                 @foreach ($evaluations as $evaluation)
                     <tr>
                         <th scope="row">{{ $evaluation->id }}</th>
-                        <td>{{ $evaluation->name_user}}</td>
+                        <td>{{ $evaluation->name_user }}</td>
                         <td> {{ $evaluation->nom_manager }} </td>
                         <td> {{ $evaluation->preparation }} </td>
                         <td> {{ $evaluation->environnement_et_style }} </td>
@@ -74,21 +74,21 @@
                         <td class="bg-danger fw-bolder text-light"> {{ $evaluation->note_totale . '%' }} </td>
                         <td>
                             <form action="{{ route('evaluations_superviseurs.destroy', $evaluation->id) }}" method="POST">
-                              {{--   <a title="Modifier évaluation" class=""
+                                {{--   <a title="Modifier évaluation" class=""
                                     href="{{ route('evaluations_superviseurs.edit', $evaluation->id) }}">
                                     <i class="fa-regular fa-pen-to-square text-dark text-decoration-none"></i></a> --}}
-    
+
                                 @csrf
                                 @method('DELETE')
-    
+
                                 <button onclick="return confirm('Etes-vous sûr de vouloir supprimer?')"
                                     title="Supprimer evaluation" type="submit" class="border-0">
                                     <i class="fa-solid fa-trash-can text-dark"></i>
                                 </button>
                             </form>
                         </td>
-    
-    
+
+
                     </tr>
                 @endforeach
             </tbody>
