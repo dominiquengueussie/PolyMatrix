@@ -45,9 +45,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/infos/client/map/{id}',[ClientsController::class, 'map'])->name('map');
     Route::resource('/evaluations_superviseurs',EvaluationSuperviseurController::class);
     Route::get('/statistiques_superviseurs',[EvaluationSuperviseurController::class, 'showAll'])->name('statistique');
-    Route::get('/excel/export',[EvaluationSuperviseurController::class, 'exportExcel'])->name('exportExcel');
+    Route::POST('/excel/export',[EvaluationSuperviseurController::class, 'exportExcel'])->name('exportExcel');
     Route::get('/statistiques/export',[EvaluationSuperviseurController::class, 'export'])->name('export');
     Route::resource('/evaluations_commercials',EvaluationCommercialController::class);
+    Route::get('/statistiques_commercials',[EvaluationCommercialController::class, 'showAll'])->name('statistiqueCommercial');
 });
 Route::resource('/agence', AgenceController::class);
 Route::resource('/users', UserController::class);

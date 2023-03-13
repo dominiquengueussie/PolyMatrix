@@ -15,7 +15,7 @@
                                         <form action="{{ route('evaluations_commercials.store') }}" method="POST">
                                             @csrf
                                             <div class="row d-flex ">
-                                                <div class="container">
+                                                <div class="container col-md-6">
                                                     <label class="form-lable" for="nom">Sélectionner
                                                         l'évaluer</label>
                                                     <select class="form-select border border-success fw-bolder"
@@ -28,6 +28,22 @@
                                                     @if ($errors->has('nom_commercial'))
                                                         <span style="font-size: 15px;"
                                                             class="text-danger">{{ $errors->first('nom_commercial') }}
+                                                        </span>
+                                                    @endif
+                                                </div>
+                                                <div class="container col-md-6">
+                                                    <label class="form-lable" for="agence">Sélectionner
+                                                        l'agence</label>
+                                                    <select class="form-select border border-success fw-bolder"
+                                                        name="agence" id="agence">
+                                                        @foreach ($agences as $agence)
+                                                            <option value="{{ $agence->nom }}">{{ $agence->nom }}
+                                                            </option>
+                                                        @endforeach
+                                                    </select>
+                                                    @if ($errors->has('agence'))
+                                                        <span style="font-size: 15px;"
+                                                            class="text-danger">{{ $errors->first('agence') }}
                                                         </span>
                                                     @endif
                                                 </div>
@@ -66,8 +82,8 @@
                                                                 <strong class="mb-2 text-primary"> Les Tactiques
                                                                     d'Execution.</strong>
                                                                 <div class="form-check">
-                                                                    <input value="2" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check1"
+                                                                    <input value="1" class="form-check-input border border-success"
+                                                                        type="checkbox" name="check2"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -86,7 +102,7 @@
                                                                 </strong>
                                                                 <div class="form-check">
                                                                     <input value="3" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check1"
+                                                                        type="checkbox" name="check3"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -105,7 +121,7 @@
                                                                     Ventes </strong>
                                                                 <div class="form-check">
                                                                     <input value="4" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check1"
+                                                                        type="checkbox" name="check4"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -123,7 +139,7 @@
                                                                     Vente</strong>
                                                                 <div class="form-check">
                                                                     <input value="4" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check1"
+                                                                        type="checkbox" name="check5"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -140,7 +156,7 @@
                                                                 <strong class="text-primary mb-2">Journey Plan</strong>
                                                                 <div class="form-check">
                                                                     <input value="2" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check1"
+                                                                        type="checkbox" name="check6"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -189,7 +205,7 @@
                                                                 </strong>
                                                                 <div class="form-check">
                                                                     <input value="1" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check6"
+                                                                        type="checkbox" name="check7"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -209,7 +225,7 @@
                                                                 </strong>
                                                                 <div class="form-check">
                                                                     <input value="2" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check6"
+                                                                        type="checkbox" name="check8"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -226,7 +242,7 @@
                                                                 <strong class="text-primary">Visibilité</strong>
                                                                 <div class="form-check">
                                                                     <input value="3" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check6"
+                                                                        type="checkbox" name="check9"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -244,7 +260,7 @@
                                                                 <strong class="text-primary mb-2"> Price</strong>
                                                                 <div class="form-check">
                                                                     <input value="4" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check6"
+                                                                        type="checkbox" name="check10"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -263,7 +279,7 @@
                                                                 </strong>
                                                                 <div class="form-check">
                                                                     <input value="1" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check7"
+                                                                        type="checkbox" name="check11"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -282,7 +298,7 @@
                                                                 </strong>
                                                                 <div class="form-check">
                                                                     <input value="2" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check7"
+                                                                        type="checkbox" name="check12"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -330,7 +346,7 @@
                                                                 <hr class="bg-success border border-1 border-success ">
                                                                 <div class="form-check">
                                                                     <input value="2" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check13"
+                                                                        type="checkbox" name="check14"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -345,7 +361,7 @@
                                                                 <hr class="bg-success border border-1 border-success ">
                                                                 <div class="form-check">
                                                                     <input value="3" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check13"
+                                                                        type="checkbox" name="check15"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -361,7 +377,7 @@
                                                                 <hr class="bg-success border border-1 border-success ">
                                                                 <div class="form-check">
                                                                     <input value="4" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check13"
+                                                                        type="checkbox" name="check16"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -378,7 +394,7 @@
                                                                 </strong>
                                                                 <div class="form-check">
                                                                     <input value="1" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check13"
+                                                                        type="checkbox" name="check17"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -387,7 +403,7 @@
                                                                     </label><br>
                                                                     @if ($errors->has('check14'))
                                                                         <span style="font-size: 15px;"
-                                                                            class="text-danger">{{ $errors->first('check14') }}</span>
+                                                                            class="text-danger">{{ $errors->first('check18') }}</span>
                                                                     @endif
                                                                 </div>
                                                             </div>
@@ -410,7 +426,7 @@
                                                                 </strong>
                                                                 <div class="form-check">
                                                                     <input value="1" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check13"
+                                                                        type="checkbox" name="check18"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -424,7 +440,7 @@
                                                                 <hr class="bg-success border border-1 border-success ">
                                                                 <div class="form-check">
                                                                     <input value="2" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check13"
+                                                                        type="checkbox" name="check19"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -439,7 +455,7 @@
                                                                 <hr class="bg-success border border-1 border-success ">
                                                                 <div class="form-check">
                                                                     <input value="3" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check13"
+                                                                        type="checkbox" name="check20"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -453,7 +469,7 @@
                                                                 <hr class="bg-success border border-1 border-success ">
                                                                 <div class="form-check">
                                                                     <input value="4" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check13"
+                                                                        type="checkbox" name="check21"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -469,7 +485,7 @@
                                                                 </strong>
                                                                 <div class="form-check">
                                                                     <input value="1" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check14"
+                                                                        type="checkbox" name="check22"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -483,7 +499,7 @@
                                                                 <hr class="bg-success border border-1 border-success ">
                                                                 <div class="form-check">
                                                                     <input value="2" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check14"
+                                                                        type="checkbox" name="check23"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -497,7 +513,7 @@
                                                                 <hr class="bg-success border border-1 border-success ">
                                                                 <div class="form-check">
                                                                     <input value="3" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check14"
+                                                                        type="checkbox" name="check24"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -511,7 +527,7 @@
                                                                 <hr class="bg-success border border-1 border-success ">
                                                                 <div class="form-check">
                                                                     <input value="4" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check14"
+                                                                        type="checkbox" name="check25"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -525,7 +541,7 @@
                                                                 <hr class="bg-success border border-1 border-success ">
                                                                 <div class="form-check">
                                                                     <input value="4" class="form-check-input border border-success"
-                                                                        type="checkbox" name="check14"
+                                                                        type="checkbox" name="check26"
                                                                         id="flexRadioDefault1">
                                                                     <label class="form-check-label"
                                                                         for="flexRadioDefault1">
@@ -559,7 +575,7 @@
                                                                     </strong>
                                                                     <div class="form-check">
                                                                         <input value="1" class="form-check-input border border-success"
-                                                                            type="checkbox" name="check13"
+                                                                            type="checkbox" name="check27"
                                                                             id="flexRadioDefault1">
                                                                         <label class="form-check-label fw-bolder"
                                                                             for="flexRadioDefault1">
@@ -591,7 +607,7 @@
                                                                         Temps:</strong>
                                                                     <div class="form-check">
                                                                         <input value="2" class="form-check-input border border-success"
-                                                                            type="checkbox" name="check13"
+                                                                            type="checkbox" name="check28"
                                                                             id="flexRadioDefault1">
                                                                         <label class="form-check-label"
                                                                             for="flexRadioDefault1">
@@ -608,7 +624,7 @@
                                                                         class="text-primary mb-2">Positive:</strong>
                                                                     <div class="form-check">
                                                                         <input value="3" class="form-check-input border border-success"
-                                                                            type="checkbox" name="check13"
+                                                                            type="checkbox" name="check29"
                                                                             id="flexRadioDefault1">
                                                                         <label class="form-check-label"
                                                                             for="flexRadioDefault1">
@@ -643,7 +659,7 @@
                                                                     </strong>
                                                                     <div class="form-check">
                                                                         <input value="1" class="form-check-input border border-success"
-                                                                            type="checkbox" name="check13"
+                                                                            type="checkbox" name="check30"
                                                                             id="flexRadioDefault1">
                                                                         <label class="form-check-label"
                                                                             for="flexRadioDefault1">
@@ -659,7 +675,7 @@
                                                                     <strong class="text-primary mb-2"> Siting:</strong>
                                                                     <div class="form-check">
                                                                         <input value="2" class="form-check-input border border-success"
-                                                                            type="checkbox" name="check13"
+                                                                            type="checkbox" name="check31"
                                                                             id="flexRadioDefault1">
                                                                         <label class="form-check-label"
                                                                             for="flexRadioDefault1">
@@ -676,7 +692,7 @@
                                                                     <strong class="text-primary mb-2">Impact:</strong>
                                                                     <div class="form-check">
                                                                         <input value="3" class="form-check-input border border-success"
-                                                                            type="checkbox" name="check13"
+                                                                            type="checkbox" name="check32"
                                                                             id="flexRadioDefault1">
                                                                         <label class="form-check-label"
                                                                             for="flexRadioDefault1">
@@ -692,7 +708,7 @@
                                                                     <strong class="text-primary mb-2">Message:</strong>
                                                                     <div class="form-check">
                                                                         <input value="4" class="form-check-input border border-success"
-                                                                            type="checkbox" name="check13"
+                                                                            type="checkbox" name="check33"
                                                                             id="flexRadioDefault1">
                                                                         <label class="form-check-label"
                                                                             for="flexRadioDefault1">
@@ -710,7 +726,7 @@
                                                                     </strong>
                                                                     <div class="form-check">
                                                                         <input value="1" class="form-check-input border border-success"
-                                                                            type="checkbox" name="check14"
+                                                                            type="checkbox" name="check34"
                                                                             id="flexRadioDefault1">
                                                                         <label class="form-check-label"
                                                                             for="flexRadioDefault1">
@@ -726,7 +742,7 @@
                                                                     <strong class="text-primary mb-2">Life:</strong>
                                                                     <div class="form-check">
                                                                         <input value="2" class="form-check-input border border-success"
-                                                                            type="checkbox" name="check14"
+                                                                            type="checkbox" name="check35"
                                                                             id="flexRadioDefault1">
                                                                         <label class="form-check-label"
                                                                             for="flexRadioDefault1">
@@ -743,7 +759,7 @@
                                                                         Safety:</strong>
                                                                     <div class="form-check">
                                                                         <input value="3" class="form-check-input border border-success"
-                                                                            type="checkbox" name="check14"
+                                                                            type="checkbox" name="check36"
                                                                             id="flexRadioDefault1">
                                                                         <label class="form-check-label"
                                                                             for="flexRadioDefault1">
@@ -778,7 +794,7 @@
                                                                     </strong>
                                                                     <div class="form-check">
                                                                         <input value="1" class="form-check-input border border-success"
-                                                                            type="checkbox" name="check13"
+                                                                            type="checkbox" name="check37"
                                                                             id="flexRadioDefault1">
                                                                         <label class="form-check-label"
                                                                             for="flexRadioDefault1">
@@ -794,7 +810,7 @@
                                                                         class="bg-success border border-1 border-success ">
                                                                     <div class="form-check">
                                                                         <input value="2" class="form-check-input border border-success"
-                                                                            type="checkbox" name="check13"
+                                                                            type="checkbox" name="check38"
                                                                             id="flexRadioDefault1">
                                                                         <label class="form-check-label"
                                                                             for="flexRadioDefault1">
@@ -810,7 +826,7 @@
                                                                         class="bg-success border border-1 border-success ">
                                                                     <div class="form-check">
                                                                         <input value="3" class="form-check-input border border-success"
-                                                                            type="checkbox" name="check13"
+                                                                            type="checkbox" name="check39"
                                                                             id="flexRadioDefault1">
                                                                         <label class="form-check-label"
                                                                             for="flexRadioDefault1">
@@ -843,7 +859,7 @@
                                                                     </strong>
                                                                     <div class="form-check">
                                                                         <input value="1" class="form-check-input border border-success"
-                                                                            type="checkbox" name="check13"
+                                                                            type="checkbox" name="check40"
                                                                             id="flexRadioDefault1">
                                                                         <label class="form-check-label"
                                                                             for="flexRadioDefault1">
@@ -858,7 +874,7 @@
                                                                         class="bg-success border border-1 border-success ">
                                                                     <div class="form-check">
                                                                         <input value="2" class="form-check-input border border-success"
-                                                                            type="checkbox" name="check13"
+                                                                            type="checkbox" name="check41"
                                                                             id="flexRadioDefault1">
                                                                         <label class="form-check-label"
                                                                             for="flexRadioDefault1">
@@ -873,7 +889,7 @@
                                                                         class="bg-success border border-1 border-success ">
                                                                     <div class="form-check">
                                                                         <input value="3" class="form-check-input border border-success"
-                                                                            type="checkbox" name="check13"
+                                                                            type="checkbox" name="check42"
                                                                             id="flexRadioDefault1">
                                                                         <label class="form-check-label"
                                                                             for="flexRadioDefault1">
@@ -888,7 +904,7 @@
                                                                         class="bg-success border border-1 border-success ">
                                                                     <div class="form-check">
                                                                         <input value="4" class="form-check-input border border-success"
-                                                                            type="checkbox" name="check13"
+                                                                            type="checkbox" name="check43"
                                                                             id="flexRadioDefault1">
                                                                         <label class="form-check-label"
                                                                             for="flexRadioDefault1">
@@ -906,7 +922,7 @@
                                                                     </strong>
                                                                     <div class="form-check">
                                                                         <input value="1" class="form-check-input border border-success"
-                                                                            type="checkbox" name="check13"
+                                                                            type="checkbox" name="check44"
                                                                             id="flexRadioDefault1">
                                                                         <label class="form-check-label"
                                                                             for="flexRadioDefault1">
@@ -926,7 +942,7 @@
                                                         <div class="col-md-6 mt-2">
                                                             <label for="resultat" class="form-label">Point fort
                                                                 <span class="text-danger">*</span></label>
-                                                            <input type="text" required name="point_fort"
+                                                            <input type="text"  name="point_fort" required
                                                                 class="form-control border border-success" 
                                                                 id="resultat">
 
@@ -935,13 +951,13 @@
                                                             <label for="condition" class="form-label">Point à
                                                                 améliorer
                                                                 <span class="text-danger">*</span></label>
-                                                            <input type="text" name="point_ameliorer"
+                                                            <input type="text" name="point_ameliorer" required
                                                                 class="form-control border border-success" 
                                                                 id="condition">
                                                         </div>
                                                         <div class="form-floating mt-2">
-                                                            <textarea style="height: 200px;" cols="500" class="form-control border border-success" required name="commentaire"
-                                                                placeholder="Insérer votre commentaire global ici" id="floatingTextarea"></textarea>
+                                                            <textarea style="height: 200px;" cols="500" class="form-control border border-success" name="commentaire"
+                                                              required placeholder="Insérer votre commentaire global ici" id="floatingTextarea"></textarea>
                                                             <label for="floatingTextarea">&nbsp; Commentaire
                                                                 global...</label>
                                                         </div>
@@ -956,7 +972,7 @@
                                                                     class="fa-solid fa-trash-can text-light"></i>
                                                                 Supprimer
                                                             </button>
-                                                            <textarea id="signature1" name="signed" style="display: none"></textarea>
+                                                            <textarea id="signature1" name="signed1" style="display: none"></textarea>
 
                                                         </div>
                                                         <div class="col-md-4 mt-2">

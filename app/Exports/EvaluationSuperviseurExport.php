@@ -3,12 +3,15 @@
 namespace App\Exports;
 
 use Illuminate\Support\Facades\DB;
+use App\Models\EvaluationCommercial;
 use App\Models\EvaluationSuperviseur;
 use Maatwebsite\Excel\Concerns\WithMapping;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\WithMultipleSheets;
+use Maatwebsite\Excel\Concerns\WithStrictNullComparison;
 
-class EvaluationSuperviseurExport implements FromCollection, WithHeadings, WithMapping
+class EvaluationSuperviseurExport implements FromCollection, WithHeadings, WithMapping,WithStrictNullComparison
 
 {
 
@@ -17,13 +20,14 @@ class EvaluationSuperviseurExport implements FromCollection, WithHeadings, WithM
    */
   public function collection()
   {
-    return EvaluationSuperviseur::all();
+    return EvaluationSuperviseur::all();  
   }
+  
 
   public function headings(): array
   {
     return [
-      //'id',
+      
       'nom',
       'nom manager',
       'preparation',

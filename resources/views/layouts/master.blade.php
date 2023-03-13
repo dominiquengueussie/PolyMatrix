@@ -21,7 +21,7 @@
     <title>PolyMatrix</title>
 </head>
 
-<body style="background-color: #dee9e0" onload="getLocation(); document.getElementById('export-form').submit();">
+<body style="background-color: #dee9e0" onload="getLocation();">
     <style>
         .kbw-signature {
             width: 100%;
@@ -32,7 +32,6 @@
             width: 100% !important;
             height: auto;
         }
-       
     </style>
     <div id="app">
         <main class="py-0">
@@ -88,8 +87,7 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="http://keith-wood.name/js/jquery.signature.js"></script>
-    
+    <script type="text/javascript" src="{{ asset('js/signature.js') }}"></script>
     <script type="text/javascript">
         var sig1 = $('#sig1').signature({
             syncField: '#signature1',
@@ -101,7 +99,7 @@
             $("#signature1").val('');
         });
 
-         var sig2 = $('#sig2').signature({
+        var sig2 = $('#sig2').signature({
             syncField: '#signature2',
             syncFormat: 'PNG'
         });
@@ -119,7 +117,7 @@
             e.preventDefault();
             sig3.signature('clear');
             $("#signature3").val('');
-        }); 
+        });
     </script>
 </body>
 

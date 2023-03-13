@@ -40,7 +40,8 @@ class RolesController extends Controller
             'role' => 'required'
         ]);
         $roles = new Roles();
-        $roles->nom = $request->role;
+        $uppercaseRole = strtoupper($request->role);
+        $roles->nom = $uppercaseRole;
         $save = $roles->save();
 
         if ($save) {

@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Exports\MultiSheetExport;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Models\EvaluationSuperviseur;
+use App\Exports\EvaluationCommercialExport;
 use App\Exports\EvaluationSuperviseurExport;
 
 class EvaluationSuperviseurController extends Controller
@@ -40,7 +42,9 @@ class EvaluationSuperviseurController extends Controller
 
     public function exportExcel()
     {
-        return Excel::download(new EvaluationSuperviseurExport, 'evaluation_superviseur.xlsx');
+        //return Excel::download(new EvaluationSuperviseurExport, 'evaluation_superviseur.xlsx');
+        return Excel::download(new MultiSheetExport, 'exported_data.xlsx');
+
     }
 
     public function export()

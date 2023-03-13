@@ -1,14 +1,11 @@
-@extends('layouts\master')
-@section('content')
+@extends('layouts.export')
+@section('export')
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ route('statistique') }}">Statistique du superviseur</a></li>
             <li class="breadcrumb-item active" aria-current="page">Exporter</li>
         </ol>
     </nav>
-    <form id="export-form" method="POST" action="{{ route('export') }}">
-        @csrf
-    </form>
     <div style="margin-top: 5rem;" class="container py-5">
         <div class="row justify-content-center">
 
@@ -23,9 +20,6 @@
                                 Exporter les données.
                             </div>
                             <span>Les fichiers seront exporté au format .Xls, .Xlsx</span>
-                            <div class="text-center mb-1 mt-3"> 
-                                <a class="btn btn-success" href="{{ route('exportExcel') }}"><i class="fa-solid fa-arrow-up-long fw-bolder"></i> Exporter</a>
-                            </div>
                         </div>
                     </div>
                 </div>

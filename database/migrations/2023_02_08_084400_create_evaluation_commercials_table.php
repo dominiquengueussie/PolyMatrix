@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('evaluation_commercials', function (Blueprint $table) {
             $table->id();
             $table->string('nom_commercial');
-            $table->string('agance');
+            $table->string('nom_superviseur');
+            $table->string('agence');
             //planing et preparation
             $table->integer("objectif_smart");
             $table->integer("tactique_execution");
@@ -29,6 +30,7 @@ return new class extends Migration
             $table->integer("qualite");
             $table->integer("distribution");
             $table->integer("visibilité");
+            $table->integer("prices");
             $table->integer("promotion");
             $table->integer("persuasion");
             $table->integer("note_vecteur_de_vente");
@@ -68,7 +70,6 @@ return new class extends Migration
             $table->integer("administration1");
             $table->integer("administration2");
             $table->integer("administration3");
-            $table->integer("administration4");
             $table->integer("note_administration");
             //EVALUATION
             $table->integer("evaluation1");
@@ -79,10 +80,10 @@ return new class extends Migration
             $table->integer("note_evaluation");
             $table->string("point_fort");
             $table->string("point_fort_a_ameliorer");
-            $table->string("commentaitaire_global");
-            $table->string("signature_commercial");
-            $table->string("signature_superviseur");
-            $table->string("signature_ASM");
+            $table->string("commentaire_global");
+            $table->string("signature_commercial")->nullable();
+            $table->string("signature_superviseur")->nullable();
+            $table->string("signature_ASM")->nullable();
             
 
             $table->timestamps();
